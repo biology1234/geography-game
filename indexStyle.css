@@ -1,0 +1,123 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+body, html {
+    height: 300vh;
+    overflow-y: smooth;
+    overflow-x: hidden;
+    overscroll-behavior-y: scroll;
+  }
+ 
+.welcomingContainer {
+  position: relative;
+  border-radius: 0 0 120px  120px;
+  padding-left: 160px;
+  padding-top: 440px;
+  background-color: rgb(65, 104, 133);
+
+
+} 
+.links{
+  color: white;
+}
+#entryHeaderBttn{
+  color: white;
+}
+.welcomingImg{
+  height: 380px;
+  position: relative;
+  bottom: 420px;
+  float: right;
+  border-radius: 0 0 120px 0 ;
+}
+
+.textInner {
+  position: relative;
+  bottom: 180px;
+  font-family: 'Unbounded', sans-serif;
+  color: white;
+  font-size: 45px;
+  font-weight: bold;
+}
+.question {
+  position: relative;
+  top: 440px;
+  color: white;
+  font-size: 26px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.answerColmContainer1, .answerColmContainer2, .answerColmContainer3 {
+ position: relative;
+ top: 770px;
+left: 50%; 
+transform: translate(-50%);
+ width: 50%;
+ padding-left: 60px;
+ padding-right: 60px;
+ padding-top:30px;
+ padding-bottom: 30px;
+  border: solid 5px black;
+  border-radius: 30px;
+  color: rgb(0,72,96);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.answersTopic{
+  text-align: center;
+  font-size: 36px;
+  color: black;
+}
+
+
+.answers {
+  position: relative;
+  left: 20px;
+  font-size: 14px;
+  
+}
+
+
+
+#question1{
+  font-size: 35px;
+  position: absolute;
+  top: 640px;
+  left: 50%;
+transform: translate(-50%);
+  text-align: center;
+ font-family:'Montserrat', sans-serif;
+
+}
+
+.questionAnswerContainer{
+  position: relative;
+    bottom: 502px;
+}
+
+.header{
+ background-color: rgb(65, 104, 133);
+}
+.fixed-header{
+  padding-left:30px ;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  opacity: 10;
+  border-radius: 0  120px  0 120px;
+
+}
+.logo_img {
+   height:80px;  
+}
+.links {
+  position: relative;
+  bottom:10px;
+}
+input {
+  position: relative;
+  bottom: 10px;
+}
+
