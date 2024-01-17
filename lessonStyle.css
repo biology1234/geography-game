@@ -1,5 +1,5 @@
 body {
-    height: 360vh;
+    height: 560vh;
     overflow-x: hidden;
 }
 .header{
@@ -41,9 +41,9 @@ hr{
     bottom:80px;
     right: 470px;
 }
-.boldText{
+.boldText1{
     position: relative;
-    top:320px;
+    top:420px;
    
     font-size: 36px;
 }
@@ -51,17 +51,19 @@ hr{
 .titleScreen{
     background-color: rgb(65, 104, 133);
     padding-left: 320px;
-    padding-top: 520px;
+    padding-top: 420px;
     border-radius: 0 0 100px 100px;
+    text-align: center;
 }
 .title{
     color: white;
     position: absolute;
     left: 50%;
-    bottom: 50%;
+    top: 30%;
     transform: translate(-50%, -50%);
     font-weight: bold;
     font-size: 36px;
+   
 }
 .titleImg{
     height: 150px;
@@ -74,5 +76,67 @@ hr{
 }
 .p1 {
     position: relative;
-    top: 320px;
+    top: -12px;
+    font-size: 15px;
+}
+.sketchfab-embed-wrapper{
+    position: absolute;
+   transform: translate(-50%, -50%);
+    left: 50%;
+    top: 54%;
+}
+
+.p2 {
+    position: relative;
+    top:420px;
+}
+.boldText2{
+    position: relative;
+    top:480px;
+}
+.middleText1{
+  position: relative;
+  top:520px;
+  font-size:22px;
+}
+.smallText1{
+    position: relative;
+    top:550px;
+}
+.plosykEpitel{
+    position: relative;
+    top:570px;
+}
+
+.smallText2{
+    position: relative;
+    top:590px;
+}
+.prizmati4enEpitel{
+    position: relative;
+    top: 600px;
+}
+.smallText3{
+    position: relative;
+    top: 620px;
+}
+.kubichenEpitel{
+    position: relative;
+    top: 630px;
+}
+.nevrqgov, .vrogovrq6t{
+    position: relative;
+    top: 650px; 
+}
+.mnogosloen{
+    position: relative;
+    top: 660px;
+}
+.boldText4{
+    position: relative;
+    top: 670px;
+}
+.smallText4{
+    position: relative;
+    top:680px;
 }

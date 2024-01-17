@@ -5,9 +5,11 @@
         <title> Начало </title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="lessonStyle.css">
-        <meta name="viewpoint" content="width = device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     </head>
     <body class="bodyLessonsPage">
+      
         <div class="header", id="header"onclick="headerscroll()">  
             <button class="logobttn"><a href="index.html"><img src="Всичко за кандидат-студентите по медицина-logos_black.png" class="logo_img"></a></button>
             
@@ -15,32 +17,49 @@
             <a href="index.html" class="links" id="links">Начало</a>  
               <a href="lesson.html" class="links", id="links">Преговор</a>  
               <a href="exams.html" class="links" id="links">Изпити</a>
-              <a href="information.html" class="links" id="links">Важна информация</a>
-    
-           
-            <input type="button" id="entryHeaderBttn" onclick="window.location.href='entryPage.html'" value="Вход">
+      
             </div>
            </div>
           
         <div class="infoContainer">
           <div class="titleScreen">
-            <h1 class="title">Тъкани</h1>
-         
+            <h1 class="title">Епителна тъкан</h1>
+            <div class="sketchfab-embed-wrapper"> 
+              <div class="sketchfab-embed-wrapper"> <iframe title="Test Yourself on the Epithelium of the Bladder" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="310" height="256" src="https://sketchfab.com/models/d602dfad84da43e19eca448ee4ab58af/embed?autospin=1&autostart=1&transparent=1&ui_hint=0"> </iframe> </div>
+          </div>
           </div>
           
             <div class="tissueContainer">
-                <h1 class="tissueTopic"><h1 class="tissue">Тъкани</h1> <br>- група от клетки с общ произход, сходно устройство и еднакви функции, заедно с междуклетъчно вещество.</h1>
+                <h1 class="tissue" id="tissue">Какво е тъкан?</h1><br>
+                <p class="p1">- съвкупност от клетки със сходен строеж, произход, функции и междуклетъчно вещество.</p>
             </div><br>
-          <h1 class="boldText">I. Епителна тъкан</h1>
-          <P class="p1">Клетките на епителната тъкан са плътно разположени с малко междуклетъчно вещество.<br> Епителната тъкан се дели на покривен епител и жлезист епител. 
-            <br><br><br>  <h1 class="boldText">Покривен епител</h1><br> <p class="p1">Покривния епител се дели на:<br><h1 class="boldText">Еднослоен</h1><br><br> плосък<br><br><br> - призматичен<br><br><br> - кубичен</p></P>
-           <h1 class="boldText">Многослоен</h1><p class="p1">-плоски клетки, които са подредени в много слоеве. </p>
-           <h1 class="boldText">Вроговящ</h1><p class="p1">-мъртви клетки с рогово вещество, които се излющват. </p>
-           <h1 class="boldText">Невроговящ</h1><p class="p1">-образува лигавици.</p>
-           
-        </div>
+          <h1 class="boldText1" id="boldText1">I. Епителна тъкан</h1>
+          <P class="p2">Клетките на епителната тъкан са плътно разположени с малко междуклетъчно вещество. <br> 
+                        Тя се дели на покривен епител и жлезист епител. <br>
+            
+        <h1 class="boldText2" id="boldText2">А. Покривен епител</h1>
+        <h1 class="middleText1" id="middleText1">А/ Еднослоен - един слой клетки</h1>
+        <p class="smallText1" id="smallText1">- плосък <br> - облага повърхности, където основната функция е обменът на вещества и газове. </p> <br>
+        <img class="plosykEpitel" src="plosykEpitel.png"><br><br>
+
+        <p class="smallText2" id="smallText1">- призматичен <br> - защитна функция, абсорбация, секреция и транспорт</p>
+        <img class="prizmati4enEpitel" src="prizmati4enEpitel.png">
         
-        
+        <p class="smallText3" id="smallText3">- кубичен <br> - участва във филтрацията на урината изпити абсорбацията на вещества </p>
+        <img class="kubichenEpitel" src="kubichenEpitel.png"><br><br>
+        <h1 class="middleText2" id="middleText2">Б/ Многослоен - плоски клети, подредени в много слоеве</h1>
+        <p class="vrogovrq6t">- вроговяващ - eпидермис</p>
+        <p class="nevrqgov">-невроговяващ - изгражда лигавици</p>
+        <img class="mnogosloen" src="mnogosloenm.png">
+
+
+        <h1 class="boldText4">Б.Жлезист епител</h1>
+        <p class="smallText4">а/ жлези с външна секреция (екзокринни жлези) - единични или група от клетки, които са свързани с каналче.
+                             <br>1.1 функции - отделя секрети на повърхността или в кухините на вътрешните органи 
+                             <br>1.2 примери - потни, мастни, млечни, слъзни, храносмилателни </p>
+        <script src="lessonScript.js"></script>
+
+
       
     </body>
 </html>

@@ -28,10 +28,13 @@ body, html {
 
 }
 .links {
-  margin-right: 15px;
+  position: relative;
+  top:12px;
+  margin-right: 20px;
   text-decoration: none;
   color: rgb(0,72,96);
    font-family: 'Franklin Gothic Medium';
+   font-size: 24px;
 }
 .entryLinks {
   text-align: center;
@@ -76,9 +79,9 @@ body, html {
  
 
  .fixed-header{
-   padding-left:30px ;
+   padding-left:30px;
    position: fixed;
-   width: 100%;
+   width: 95%;
    z-index: 1004;
    
    opacity: 10;
@@ -92,9 +95,6 @@ body, html {
    color: white;
  }
  
- .logo_img {
-    height:80px;  
- }
  
  .input2 {
    position: relative;

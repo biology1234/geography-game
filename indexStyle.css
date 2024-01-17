@@ -103,21 +103,11 @@ transform: translate(-50%);
 .fixed-header{
   padding-left:30px ;
   position: fixed;
-  width: 100%;
+  width: 98.3%;
   z-index: 1000;
   opacity: 10;
   border-radius: 0  120px  0 120px;
 
 }
-.logo_img {
-   height:80px;  
-}
-.links {
-  position: relative;
-  bottom:10px;
-}
-input {
-  position: relative;
-  bottom: 10px;
-}
+
 
