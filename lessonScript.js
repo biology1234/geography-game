@@ -37,3 +37,15 @@ addEventListener('scroll', function coloredText3(event) {
     text3.style.color = "#F4BC1C";
   }
 });
+let text4 = document.getElementById('boldText4');
+let scroll4 = 0;
+
+// Променено събитие от 'wheel' на 'scroll'
+addEventListener('scroll', function coloredText4(event) {
+  // Използвайте pageYOffset, за да получите текущата позиция на скролбара
+  scroll4 = window.pageYOffset;
+
+  if (scroll4 >= 900) {
+    text4.style.color = "#F4BC1C";
+  }
+});

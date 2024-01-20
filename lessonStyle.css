@@ -1,5 +1,5 @@
 body {
-    height: 560vh;
+    height: 400vh;
     overflow-x: hidden;
 }
 .header{
@@ -25,6 +25,7 @@ hr{
     margin-left: 28px;
 }
 
+  
 .tissueContainer {
     top: 760px;
     border: 3px solid black;
@@ -59,7 +60,7 @@ hr{
     color: white;
     position: absolute;
     left: 50%;
-    top: 30%;
+    top: 20%;
     transform: translate(-50%, -50%);
     font-weight: bold;
     font-size: 36px;
@@ -83,7 +84,7 @@ hr{
     position: absolute;
    transform: translate(-50%, -50%);
     left: 50%;
-    top: 54%;
+    top: 44%;
 }
 
 .p2 {
@@ -139,4 +140,27 @@ hr{
 .smallText4{
     position: relative;
     top:680px;
+}
+.middleText2{
+    font-size:22px;
+}
+.image5{
+    position: relative;
+    top: 730px;
+}
+.smallText5{
+    position: relative;
+    top:800px;
+}
+.image6{
+    position: relative;
+    top: 820px;
+}
+.smallText6{
+    position: relative;
+    top: 840px;
+}
+.image7{
+    position: relative;
+    top: 860px;
 }
