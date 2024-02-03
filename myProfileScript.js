@@ -37,23 +37,14 @@
         });
         
 
+
         const user = auth.currentUser;
-        let profileName = '';
-        let profileEmail = '';
-        let profilePhoto = '';
         if (user !== null) {
           user.providerData.forEach((profile) => {
-           
-           profileName = profile.displayName;
-           profileEmail = profile.email;
-           profilePhoto = profile.photoURL; 
-
-           alert(`${profileName}, ${profileEmail}`);
+            console.log("Sign-in provider: " + profile.providerId);
+            console.log("  Provider-specific UID: " + profile.uid);
+            console.log("  Name: " + profile.displayName);
+            console.log("  Email: " + profile.email);
+            console.log("  Photo URL: " + profile.photoURL);
           });
         }
-        
-        let htmlEmail = document.getElementById('email');
-        let htmlName = document.getElementById('name');
-
-        htmlName.textContent = profileName; 
-        htmlEmail.textContent = profileEmail; 
