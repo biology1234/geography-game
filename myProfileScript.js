@@ -2,7 +2,6 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebas
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
 import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyB_TgoZVBgp8xqflkvVJbRbPfvTWnyYfOc",
@@ -22,6 +21,7 @@ const auth = getAuth();
 const firebase = app;
 
 let signOutBttn = document.getElementById('signOut');
+let emailElement = document.getElementById('email'); // Define the email element
 
 signOutBttn.addEventListener('click', function signOut12() {
   signOut(auth).then(() => {
@@ -30,16 +30,14 @@ signOutBttn.addEventListener('click', function signOut12() {
     window.location.href = "index.html";
 
     // Получаване на информацията за потребителя след успешно излизане
-    let email = document.getElementById('email');
     const user = auth.currentUser;
     if (user !== null) {
       user.providerData.forEach((profile) => {
-         profile.providerId;
-         profile.uid;
-        profile.displayName;
-        
-         profile.photoURL;
-          email.textContent = profile.email;     
+        // profile.providerId;
+        // profile.uid;
+        // profile.displayName;
+        // profile.photoURL;
+        emailElement.textContent = profile.email; // Use the emailElement instead of email
       });
     }
   })
