@@ -47,11 +47,13 @@
            profileName = profile.displayName;
            profileEmail = profile.email;
            profilePhoto = profile.photoURL; 
+
+           alert(`${profileName}, ${profileEmail}`);
           });
         }
         
         let htmlEmail = document.getElementById('email');
         let htmlName = document.getElementById('name');
-        
+
         htmlName.textContent = profileName; 
         htmlEmail.textContent = profileEmail; 
