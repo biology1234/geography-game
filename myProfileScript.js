@@ -53,6 +53,7 @@ if (user !== null) {
     console.log("  Photo URL: " + photoURL);
   });
 
+  
   // Извеждане на информацията в HTML документа
   const userInfoContainer = document.getElementById("user-info-container");
   userInfoContainer.innerHTML = `
@@ -62,5 +63,8 @@ if (user !== null) {
     <p>Email: ${email}</p>
     <p>Photo URL: ${photoURL}</p>
   `;
+}
+else{
+    alert('Error');
 }
 
