@@ -30,7 +30,8 @@ signOutBttn.addEventListener('click', function signOut12() {
     window.location.href = "index.html";
   });
 });
-  const user = auth.currentUser;
+
+const user = firebase.auth().currentUser; 
 
   if (user !== null) {
   alert('OK!');
