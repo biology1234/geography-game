@@ -69,7 +69,8 @@
                 .then((userCredential) => {
                     // Signed up 
                     const user = userCredential.user;
-                    alert('OK');
+                    alert('Влизането в профила е успешно!');
+                   window.location.href='index.html';
                     // ...
                 })
                 .catch((error) => {
@@ -92,6 +93,7 @@
         google.addEventListener('click', (event) => {
             event.preventDefault();
             signInWithRedirect(auth, new GoogleAuthProvider());
+            window.location.href='index.html';
         });
 
         const provider = new FacebookAuthProvider();
@@ -107,6 +109,7 @@
           event.preventDefault();
           signInWithRedirect(auth, new GithubAuthProvider() );
         });
+        
     </script>
 
     <script src="entryPageScript.js"></script>
