@@ -14,3 +14,21 @@ const firebaseConfig = {
   measurementId: "G-58F1VKGWFK"
 };
 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const auth = getAuth();
+const firebase = app;
+
+let signOutBttn = document.getElementById('signOut');
+let emailElement = document.getElementById('email'); // Define the email element
+
+signOutBttn.addEventListener('click', function signOut12() {
+  signOut(auth).then(() => {
+    // Sign-out successful.
+    alert('Излизането от профила бе успешно!');
+    window.location.href = "index.html";
+
+  });
+});
+
