@@ -68,7 +68,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebas
       const app = initializeApp(firebaseConfig);
       const analytics = getAnalytics(app);
       const auth = getAuth();
-      firebase.auth().onAuthStateChanged(function(user) {
+     onAuthStateChanged(function(user) {
         if (user) {
           // Потребителят е логнат
          alert('има');
