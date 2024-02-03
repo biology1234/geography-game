@@ -33,7 +33,7 @@ input{
         height: 17px;
         position: relative;
         left: 160px;
-        bottom: 200px;
+        bottom: 193px;
         cursor: pointer; 
     }
     .infoContainer2{
@@ -43,9 +43,9 @@ input{
         background-color:rgba(81, 128, 216, 0.677);
         padding-left: 39px;
         padding-right: 9px;
-        padding-top: 54px; 
+        padding-top: 56px; 
         padding-bottom: 128px;
-        border-radius: 0 120px 120px 0    ;
+        border-radius: 0 120px 120px 0 ;
     }
     .title2{
         position: relative;
