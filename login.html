@@ -59,7 +59,7 @@
           .then((userCredential) => {
     // Signed in 
      const user = userCredential.user;
-     alert('Успешно си влязохте в профила.');
+     alert('Влизането в профила бе успешно!');
      window.location.href = "index.html";
     // ...
     })
@@ -99,6 +99,7 @@
         });
         onAuthStateChanged(auth, (user) => {
     if (user) {
+    alert('Влизането в профила бе успешно!');
    window.location.href ='index.html';
     const uid = user.uid;
     // ...
