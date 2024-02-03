@@ -39,7 +39,7 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
         import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
-        import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signInWithRedirect, getRedirectResult } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signInWithRedirect, getRedirectResult, FacebookAuthProvider  } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
         // Your web app's Firebase configuration
         const firebaseConfig = {
@@ -91,6 +91,14 @@
         google.addEventListener('click', (event) => {
             event.preventDefault();
             signInWithRedirect(auth, new GoogleAuthProvider());
+        });
+
+        const provider = new FacebookAuthProvider();
+        const facebook = document.getElementById('facebook');
+        facebook.addEventListener('click', (event) => {
+          event.preventDefault();
+          signInWithRedirect(auth, new FacebookAuthProvider());
+
         });
     </script>
 
