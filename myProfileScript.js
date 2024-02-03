@@ -60,7 +60,7 @@
           if (user !== null) {
             // The user object has basic properties such as display name, email, etc.
             const displayName = user.displayName;
-             email === user.email;
+             email = user.email;
             const photoURL = user.photoURL;
             const emailVerified = user.emailVerified;
           
