@@ -89,12 +89,16 @@
             });
         });
 
-        const google = document.getElementById('google');
         google.addEventListener('click', (event) => {
-            event.preventDefault();
-            signInWithRedirect(auth, new GoogleAuthProvider());
-            window.location.href='index.html';
-        });
+    event.preventDefault();
+    signInWithRedirect(auth, new GoogleAuthProvider()).then(() => {
+        // Handle successful sign-in
+        window.location.href = 'index.html'; // Redirect to the home page
+    }).catch((error) => {
+        // Handle errors if needed
+        console.error(error);
+    });
+});
 
         const provider = new FacebookAuthProvider();
         const facebook = document.getElementById('facebook');
