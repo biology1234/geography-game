@@ -1,119 +1,50 @@
-function submitQuiz() {
-    let score = 0; 
-    let finalScore = 0; 
-    const q1Answer = document.querySelector('input[name="q1"]:checked').value;
+let studentScore = 0;
+let examScore = 0;
 
-    if (q1Answer === "c") {
-        score += 1;
-        finalScore +=1;
-    } 
-    else {
-        finalScore += 1; 
-    }
-    
-   const q2Answer = document.querySelector('input[name="q2"]:checked').value;
-
-    if (q2Answer === "a") {
-        score += 1;
-        finalScore +=1;
-    } 
-    else {
-        finalScore += 1; 
-    }/*
+function submitQuiz(event) {
+  const firstQuestion = document.querySelector('input[name="q1"]:checked');
  
-const q3Answer = document.querySelector('input[name="q3"]:checked').value;
 
-    if (q3Answer === "a") {
-        score += 1;
-        finalScore +=1;
-    } 
-    else {
-        finalScore += 1; 
-   } 
- const q4Answer = document.querySelector('input[name="q4"]:checked').value;
+  if (firstQuestion && firstQuestion.value === 'c') {
+    studentScore += 1;
+  }
 
-    if (q4Answer === "c") {
-        score += 1;
-        finalScore +=1;
-    } 
-    else {
-        finalScore += 1; 
-    }
- const q5Answer = document.querySelector('input[name="q5"]:checked').value;
- if (q5Answer ==="c") {
-    score += 1;
-    finalScore +=1;
- }
- else {
-    finalScore +=1;
- }
- const q6Answer = document.querySelector('input[name="q6"]:checked').value;
- if (q6Answer ==="c") {
-    score += 1;
-    finalScore +=1;
- }
- else {
-    finalScore +=1;
- }
- const q7Answer = document.querySelector('input[name="q7"]:checked').value;
- if (q7Answer ==="b") {
-    score += 1;
-    finalScore +=1;
- }
- else {
-    finalScore +=1;
- }
- const q8Answer = document.querySelector('input[name="q8"]:checked').value;
- if (q8Answer ==="d") {
-    score += 1;
-    finalScore +=1;
- }
- else {
-    finalScore +=1;
- }
- const q9Answer = document.querySelector('input[name="q9"]:checked').value;
- if (q9Answer ==="d") {
-    score += 1;
-    finalScore +=1;
- }
- else {
-    finalScore +=1;
- }
- const q10Answer = document.querySelector('input[name="q10"]:checked').value;
- if (q10Answer ==="b") {
-    score += 1;
-    finalScore +=1;
- }
- else {
-    finalScore +=1;
- }
- const q11Answer = document.querySelector('input[name="q11"]:checked').value;
- if (q11Answer ==="c") {
-    score += 1;
-    finalScore +=1;
- }
- else {
-    finalScore +=1;
- }
- const q12Answer = document.querySelector('input[name="q12"]:checked').value;
- if (q12Answer ==="c") {
-    score += 1;
-    finalScore +=1;
- }
- else {
-    finalScore +=1;
- }
- const q13Answer = document.querySelector('input[name="q13"]:checked').value;
- if (q13Answer ==="d") {
-    score += 1;
-    finalScore +=1;
- }
- else {
-    finalScore +=1;
- }
- */
-alert(`Вашият резултат е ${score} точки от ${finalScore} точки`) ;
-
+  examScore += 1;
+  alert(`Браво, вие изкарахте ${studentScore} точки от ${examScore} точки`);
+  event.preventDefault();
 }
-
-
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyB_TgoZVBgp8xqflkvVJbRbPfvTWnyYfOc",
+      authDomain: "biomedicine-29379.firebaseapp.com",
+      databaseURL: "https://biomedicine-29379-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "biomedicine-29379",
+      storageBucket: "biomedicine-29379.appspot.com",
+      messagingSenderId: "1023601874434",
+      appId: "1:1023601874434:web:da6c166d9d0598a237f91b",
+      measurementId: "G-58F1VKGWFK"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    
+  
+    const db = getDatabase(app);
+  
+               document.getElementById("submitButton").addEventListener('click', function database(e){
+                e.preventDefault();
+                set(ref(db, 'user/'),
+                {
+     
+                  Брой_точки: studentScore.value,
+                  
+  
+                });
+                  
+               })

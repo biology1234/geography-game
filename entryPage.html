@@ -1,36 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="entryPageStyle.css">
-    <title>Вход</title>
-</head>
-<body>
-  <div class="header", id="header"onclick="headerscroll()">  
-    <button class="logobttn"><a href="index.html"><img src="Всичко за кандидат-студентите по медицина-logos_black.png" class="logo_img"></a></button>
-    
-    <div class="linksDiv" > 
-    <a href="index.html" class="links">Начало</a>  
-      <a href="lesson.html" class="links">Преговор</a>  
-      <a href="exams.html" class="links">Изпити</a>
-      <a href="information.html" class="links">Важна информация</a>
-
-   
-    <input type="button" id="entryHeaderBttn" onclick="window.location.href='entryPage.html'" value="Вход">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Начало </title>
+       <link rel="stylesheet" href="entryPageStyle.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body >
+      
+    <form id="form">
+    <!--Регистрация-->
+       <div class="informationContainer" id="informationContainer">
+      <h2 class="title" id="title1">Регистрация</h2>
+     <p class="informationText" id="informationText">За да използвате пълната функционалност на <br>уеб приложението, трябва да се регистрирате.<br>Просто попълнете полетата или влезте с <br>   Google, Facebook или Microsoft акаунт.</p>
+     <p class="haveAccount" id="haveAccount">Имате акаунт? Влезте от <a href="">тук.</a></p> 
     </div>
-   </div>
- 
-        
-         
-          
+      
+      <input class="name" type="text" placeholder="Въведете име" required id="name"><br>
+      <input class="lastName" type="text" placeholder="Въведете фамилия" required id="lastName"><br>
+      <input class="email" type="email" placeholder="Въведете имейл" required id="email"><br>
+      <input class="password" type="password" placeholder="Въведете парола" required id="passwordInput" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}([!@#$%^&*()_+{}\[\]:;,.?~\\/-])?" title="Моля, запишете парола по дадените изисквания"><br>
+      <img src="4779893-200.png" class="passwordShowingImg" id='passwordShowingImg' onclick="passwordShowing()">
+      <span class="dot1" id="dot1"></span><p class="p1" id="p1">Паролата трябва да съдържа <br> минимум 8  символа.</p> <br>
+      <span class="dot2" id="dot2"></span><p class="p2" id="p2"> Паролата трябва да съдържа поне 1<br> главна буква. </p> <br>
+      <span class="dot3" id="dot3"></span><p class="p3" id="p3">Паролата трябва да съдържа поне 1<br> специален знак.</p> <br>
+      <span class="dot4" id="dot4"></span><p class="p4"id="p4">Паролата трябва да съдържа поне 1<br> цифра.</p><br>
+      <input type="checkbox" class="checkBox1" id="checkbox1"><span class="savingProfile" id="savingProfile">Запазване на профила?</span>
+      
+      <input type="submit" class="submitReg" value="Регистрация"  id="submitReg">
+     
+    <a href="#" class="google" id="google"><i class="fa-brands fa-google"></i></a>  
+    <a href="#" class="facebook" id="facebook"><i class="fa-brands fa-facebook"></i></a> 
+    <a href="#" class="github" id="github"><i class="fa-brands fa-github"></i></a>
+</form>   
+            
+            
 
-         
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+    import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyB_TgoZVBgp8xqflkvVJbRbPfvTWnyYfOc",
+      authDomain: "biomedicine-29379.firebaseapp.com",
+      databaseURL: "https://biomedicine-29379-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "biomedicine-29379",
+      storageBucket: "biomedicine-29379.appspot.com",
+      messagingSenderId: "1023601874434",
+      appId: "1:1023601874434:web:da6c166d9d0598a237f91b",
+      measurementId: "G-58F1VKGWFK"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getDatabase(app);
+
+  document.getElementById("submitReg").addEventListener('click', function Submit(е){
+  е.preventDefault();
+   set(ref(db, 'Потребители/' + document.getElementById("name").value),
+ {
+
+   name: document.getElementById("name").value,
+   lastName: document.getElementById("lastName").value,
+   email: document.getElementById("email").value,
+   password: document.getElementById("passwordInput").value
+
+ })
+   alert('Log In Sucess');
+});
+
+// Логин с електронна поща и парола
+const email = document.getElementById('email');
+const password = document.getElementById('passwordInput');
+
+firebase.auth().signInWithEmailAndPassword(email, password)
+  .then((userCredential) => {
+    // Ако логинът е успешен, userCredential ще съдържа информация за потребителя
+    const user = userCredential.user;
+
+    // Проверка дали потребителят съществува
+    if (user) {
+      console.log("Потребителят съществува и е логнат успешно!");
+    } else {
+      console.log("Невалиден потребителски профил!");
+    }
+  })
+  .catch((error) => {
+    console.error("Грешка при логин: ", error.message);
+  });
+
+    
+  </script>
+  
+  
+
+ <script src="entryPageScript.js"></script>
 
       
-
-
-
-</body>
+    </body>
 </html>

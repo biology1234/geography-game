@@ -49,20 +49,3 @@ hr{
     font-size: 36px;
 }
 
-.titleScreen{
-    background-color: rgb(65, 104, 133);
-    padding-left: 320px;
-    padding-top: 220px;
-    border-radius: 0 0 100px 100px;
-    text-align: center;
-}
-.title{
-    color: white;
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%, -50%);
-    font-weight: bold;
-    font-size: 36px;
-   
-}
