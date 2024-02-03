@@ -61,6 +61,7 @@
             // The user object has basic properties such as display name, email, etc.
             const displayName = user.displayName;
              email = user.email;
+             alert (email);
             const photoURL = user.photoURL;
             const emailVerified = user.emailVerified;
           
