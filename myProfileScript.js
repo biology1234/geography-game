@@ -21,7 +21,7 @@ const auth = getAuth();
 const firebase = app;
 
 let signOutBttn = document.getElementById('signOut');
-let emailElement = document.getElementById('email'); // Define the email element
+
 
 signOutBttn.addEventListener('click', function signOut12() {
   signOut(auth).then(() => {
@@ -31,7 +31,7 @@ signOutBttn.addEventListener('click', function signOut12() {
   });
 });
 
-const user = firebase.auth().currentUser; 
+const user = auth.currentUser; 
 
   if (user !== null) {
   alert('OK!');
