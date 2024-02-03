@@ -29,18 +29,17 @@ signOutBttn.addEventListener('click', function signOut12() {
     window.location.href = "index.html";
 
     // Получаване на информацията за потребителя след успешно излизане
+    let email = document.getElementById('email');
     const user = auth.currentUser;
     if (user !== null) {
       user.providerData.forEach((profile) => {
-        console.log("Sign-in provider: " + profile.providerId);
-        console.log("  Provider-specific UID: " + profile.uid);
-        console.log("  Name: " + profile.displayName);
-        console.log("  Email: " + profile.email);
-        console.log("  Photo URL: " + profile.photoURL);
+         profile.providerId;
+         profile.uid;
+        profile.displayName;
+        
+         profile.photoURL;
+          email.textContent = profile.email;     
       });
     }
-  }).catch((error) => {
-    // An error happened.
-    alert('Грешка, моля опитайте по-късно.');
-  });
+  })
 });
