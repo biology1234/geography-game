@@ -39,7 +39,7 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
         import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
-        import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signInWithRedirect, getRedirectResult, FacebookAuthProvider  } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        import { GithubAuthProvider, getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signInWithRedirect, getRedirectResult, FacebookAuthProvider  } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
         // Your web app's Firebase configuration
         const firebaseConfig = {
@@ -99,6 +99,12 @@
           event.preventDefault();
           signInWithRedirect(auth, new FacebookAuthProvider());
 
+        });
+        const provider = new GithubAuthProvider();
+        const github = document.getElementById('github');
+        github.addEventListener('click', (event) =>{
+          event.preventDefault();
+          signInWithRedirect(auth, new GithubAuthProvider() );
         });
     </script>
 
