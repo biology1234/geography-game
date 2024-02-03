@@ -56,43 +56,39 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebas
           measurementId: "G-58F1VKGWFK"
         };
       
-        window.addEventListener('load', (event) => {// Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-        const auth = getAuth();
-        let signOutBttn = document.getElementById('signOut');
-        signOutBttn.addEventListener('click', function signOut12(){
-       signOut(auth).then(() => {
-   // Sign-out successful.
-   alert('Излизането от профила бе успешно!');
-   window.location.href = "index.html";
-          }).catch((error) => {
-      // An error happened.
-      alert('Грешка, моля опитайте по-късно.');
-         });
-        });
-        
+        window.addEventListener('load', (event) => {
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth();
 
-    const user = auth.currentUser; 
-if (user !== null) { 
-	// The user object has basic properties 
-	// such as display name, email, etc. 
-	const displayName = user.displayName; 
-	const email1 = user.email; 
-	const photoURL = user.photoURL; 
-	const emailVerified = user.emailVerified; 
-	const uid = user.uid; 
+    let signOutBttn = document.getElementById('signOut');
+    signOutBttn.addEventListener('click', function signOut12() {
+      signOut(auth).then(() => {
+        // Sign-out successful.
+        alert('Излизането от профила бе успешно!');
+        window.location.href = "index.html";
+      }).catch((error) => {
+        // An error happened.
+        alert('Грешка, моля опитайте по-късно.');
+      });
+    });
 
-    let name = document.getElementById('name');
-    let email = document.getElementById('email');
-     
-     email.textContent = email1;
-     name.textContent = displayName;
+    const user = auth.currentUser;
+    if (user !== null) {
+      // The user object has basic properties 
+      const displayName = user.displayName;
+      const email1 = user.email;
+
+      let name = document.getElementById('name');
+      let email = document.getElementById('email');
+
+      email.textContent = email1;
+      name.textContent = displayName;
+    } else {
+      alert('error');
     }
-    else{
-        alert('error');
-    }
-});
+  });
       </script>
 </body>
 </html>
