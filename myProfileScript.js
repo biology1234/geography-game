@@ -29,40 +29,14 @@ signOutBttn.addEventListener('click', function signOut12() {
     alert('Излизането от профила бе успешно!');
     window.location.href = "index.html";
   });
-  
+});
   const user = auth.currentUser;
 
   if (user !== null) {
-    // Инициализиране на променливи за съхранение на информацията
-    let providerId, uid, displayName, email, photoURL;
-
-    // Итерация през информацията за доставчиците на потребителски данни
-    user.providerData.forEach((profile) => {
-      providerId = profile.providerId;
-      uid = profile.uid;
-      displayName = profile.displayName;
-      email = profile.email;
-      photoURL = profile.photoURL;
-
-      // Извеждане на информацията в конзолата (може да се използва и за тестване)
-      console.log("Sign-in provider: " + providerId);
-      console.log("  Provider-specific UID: " + uid);
-      console.log("  Name: " + displayName);
-      console.log("  Email: " + email);
-      console.log("  Photo URL: " + photoURL);
-    });
-
-    // Извеждане на информацията в HTML документа
-    const userInfoContainer = document.getElementById("user-info-container");
-    userInfoContainer.innerHTML = `
-      <p>Sign-in provider: ${providerId}</p>
-      <p>Provider-specific UID: ${uid}</p>
-      <p>Name: ${displayName}</p>
-      <p>Email: ${email}</p>
-      <p>Photo URL: ${photoURL}</p>
-    `;
+  alert('OK!');
+   
   }
   else {
     alert('Error');
   }
-});
+
