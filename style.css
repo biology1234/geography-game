@@ -30,6 +30,7 @@ body, html {
 .links {
   position: relative;
   top:12px;
+  right: 120px;
   margin-right: 20px;
   text-decoration: none;
   color: white;
@@ -101,6 +102,38 @@ body, html {
    bottom: 10px;
    
  }
-
+.myProfileBttn{
+  position: relative;
+  bottom: 22px;
+  left: 200px;
+  background-color: transparent;
+  border: 2px white solid;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 40px;
+  cursor: pointer;
+  color: white;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 20px;
+  display: none;
+}
+.logInBttn{
+  position: relative;
+  bottom: 22px;
+  left: 200px;
+  background-color: transparent;
+  border: 2px white solid;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 40px;
+  cursor: pointer;
+  color: white;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 20px;
+}
 
 

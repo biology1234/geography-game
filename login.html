@@ -3,43 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="logInStyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
-    <input class="email" type="email" id="email" placeholder="email" required>
-    <input type="password" placeholder="password" id="password" required>
-    <input type="submit" id="submit">
-
-    <script type="module">
+    <form class="login" id="login">
+        <input class="email2" id="email2" placeholder="Въведете имейл" type="email" required>
+        <input class="password2" type="password" placeholder="Въведете парола" required id="password2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}([!@#$%^&*()_+{}\[\]:;,.?~\\/-])?" title="Моля, запишете парола по дадените изисквания"><br>
+      <img src="4779893-200.png" class="passwordShowingImg2" id='passwordShowingImg2' onclick="passwordShowing()">
+      
+      <div class="infoContainer2">
+              <h2 class="title2" id="title2">Вход</h2>
+              <p class="informationText2" id="informationText">За да използвате пълната функционалност на <br>уеб приложението, трябва да влезете.<br>Просто попълнете полетата или влезте с <br>  Google, Facebook или GitHub акаунт.</p>
+              <p class="dontHaveAccount" id="dontHaveAccount">Нямате акаунт? Ргистрирате от <a href="entryPage.html" id="dontHaveAccountLink">тук.</a></p>
+    
+    </div> 
+    <a href="forgetPassword.html" class="forgetPassword">Забравена парола</a>
+    <input type="submit" id="submit2" value="Вход" class="submit2"> 
+          <a href="#" class="google2" id="google"><i class="fa-brands fa-google"></i></a>  
+          <a href="#" class="facebook2" id="facebook"><i class="fa-brands fa-facebook"></i></a> 
+          <a href="#" class="github2" id="github"><i class="fa-brands fa-github"></i></a>
+      </form>
+      <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+        import { signInWithEmailAndPassword, GithubAuthProvider, getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signInWithRedirect, getRedirectResult, FacebookAuthProvider  } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
         // Your web app's Firebase configuration
-        // ...
+        const firebaseConfig = {
+            apiKey: "AIzaSyB_TgoZVBgp8xqflkvVJbRbPfvTWnyYfOc",
+            authDomain: "biomedicine-29379.firebaseapp.com",
+            databaseURL: "https://biomedicine-29379-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "biomedicine-29379",
+            storageBucket: "biomedicine-29379.appspot.com",
+            messagingSenderId: "1023601874434",
+            appId: "1:1023601874434:web:da6c166d9d0598a237f91b",
+            measurementId: "G-58F1VKGWFK"
+        };
 
         // Initialize Firebase
-        const firebaseApp = initializeApp(firebaseConfig);
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getDatabase(app);
+        const auth = getAuth();
 
-        // Add an event listener for the "submit" button
-        document.getElementById('submit').addEventListener('click', () => {
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
+        document.getElementById("submit2").addEventListener('click', function (event) {
+            event.preventDefault();
+            const email = document.getElementById('email2').value;
+            const password = document.getElementById('password2').value;
 
-            const auth = getAuth();
             signInWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                    // Signed in 
-                    const user = userCredential.user;
-                    // ...
-                    alert('sign in');
-                })
-                .catch((error) => {
-                    alert('error');
-                    const errorCode = error.code;
-                    const errorMessage = error.message;
-                });
+          .then((userCredential) => {
+    // Signed in 
+     const user = userCredential.user;
+     alert('Успешно си влязохте в профила.');
+     window.location.href = "index.html";
+    // ...
+    })
+    .catch((error) => {
+     const errorCode = error.code;
+     const errorMessage = error.message;
+     alert('Моля, въведете валиден имейл адрес или парола');
+  });
+        });
+
+        document.getElementById("submit2").addEventListener('click', function (event) {
+
+            set(ref(db, 'Потребители/' + document.getElementById("name").value), {
+                name: document.getElementById("name").value,
+                lastName: document.getElementById("lastName").value,
+            });
+        });
+
+        const google = document.getElementById('google2');
+        google.addEventListener('click', (event) => {
+            event.preventDefault();
+            signInWithRedirect(auth, new GoogleAuthProvider());
+        });
+
+        const provider = new FacebookAuthProvider();
+        const facebook = document.getElementById('facebook2');
+        facebook.addEventListener('click', (event) => {
+          event.preventDefault();
+          signInWithRedirect(auth, new FacebookAuthProvider());
+
+        });
+        const provider3 = new GithubAuthProvider();
+        const github = document.getElementById('github2');
+        github.addEventListener('click', (event) =>{
+          event.preventDefault();
+          signInWithRedirect(auth, new GithubAuthProvider() );
         });
     </script>
+   
 </body>
 </html>

@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <form id="form">
+    <form id="form" class="reg">
+      
         <!--Регистрация-->
         <div class="informationContainer" id="informationContainer">
             <h2 class="title" id="title1">Регистрация</h2>
-            <p class="informationText" id="informationText">За да използвате пълната функционалност на <br>уеб приложението, трябва да се регистрирате.<br>Просто попълнете полетата или влезте с <br>   Google, Facebook или Microsoft акаунт.</p>
-            <p class="haveAccount" id="haveAccount">Имате акаунт? Влезте от <a href="#">тук.</a></p>
+            <p class="informationText" id="informationText">За да използвате пълната функционалност на <br>уеб приложението, трябва да се регистрирате.<br>Просто попълнете полетата или влезте с <br>   Google, Facebook или GitHub акаунт.</p>
+            <p class="haveAccount" id="haveAccount">Имате акаунт? Влезте от <a href="login.html" id="haveAccountLink">тук.</a></p>
         </div>
 
         <input class="name" type="text" placeholder="Въведете име" required id="name"><br>
@@ -28,12 +29,12 @@
         <input type="checkbox" class="checkBox1" id="checkbox1"><span class="savingProfile" id="savingProfile">Запазване на профила?</span>
 
         <input type="submit" class="submitReg" value="Регистрация"  id="submitReg">
-
+        
         <a href="#" class="google" id="google"><i class="fa-brands fa-google"></i></a>  
         <a href="#" class="facebook" id="facebook"><i class="fa-brands fa-facebook"></i></a> 
         <a href="#" class="github" id="github"><i class="fa-brands fa-github"></i></a>
     </form>   
-
+    
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";

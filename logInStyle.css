@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap');
+body{
+overflow-x: hidden;
+ 
+  height: 100vh;
+  background-color: #ddd;
+ 
+}
+input{
+    text-align: left;
+    padding-top: 10px;
+    width:250px;
+    border-bottom: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+::placeholder{
+    text-align: left;
+}
+.login{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white; 
+    padding-left: 470px;
+    padding-top: 316px;
+    text-align: center;
+    }
+    .passwordShowingImg2{
+        height: 17px;
+        position: relative;
+        left: 160px;
+        bottom: 200px;
+        cursor: pointer; 
+    }
+    .infoContainer2{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color:rgba(81, 128, 216, 0.677);
+        padding-left: 39px;
+        padding-right: 9px;
+        padding-top: 54px; 
+        padding-bottom: 128px;
+        border-radius: 0 120px 120px 0    ;
+    }
+    .title2{
+        position: relative;
+        bottom: 50px;
+        right: 40px;
+        font-family: 'Caveat', cursive;
+        font-size: 35px;
+    }
+    .informationText2{
+        position: relative;
+        bottom: 30px;
+        right: 5px;
+        font-family: 'Noto Sans SC', sans-serif;
+    }
+    .dontHaveAccount {
+        font-family: 'Noto Sans SC', sans-serif;
+    }
+    .email2{
+        position: relative;
+        bottom: 220px;
+    }
+    .password2{
+        position: relative;
+        bottom: 170px;
+    }
+    .email2, .password2{
+        right: 30px;
+    }
+    .submit2{
+        position: relative;
+        bottom: 148px;
+        right: 20px;
+        cursor: pointer;
+        background-color: transparent;
+        text-align: center;
+        border: 1px black solid;
+        border-radius: 40px;
+        width: 180px;
+        height: 40px;
+    }
+    .submit2:hover{
+        background-color: rgba(81, 128, 216, 0.677);
+        border: 2px black solid;
+    }
+    .forgetPassword {
+        position: relative;
+        bottom: 70px;
+        right: 60px;
+        color: black;
+        font-family: 'Noto Sans SC', sans-serif;
+    }
+    .google2{
+        position: relative;
+        bottom: 40px;
+        right: 200px;
+    }
+    .facebook2{
+        position: relative;
+        bottom: 40px;
+        right: 155px;
+    }
+    .github2{
+        position: relative;
+        bottom: 40px;
+        right: 110px;
+    }
