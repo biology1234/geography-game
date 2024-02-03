@@ -1,7 +1,7 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
         import { getAuth, signOut  } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-        const firebase = app;
+        
 
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
@@ -23,6 +23,7 @@
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
         const auth = getAuth();
+        const firebase = app;
         let signOutBttn = document.getElementById('signOut');
         signOutBttn.addEventListener('click', function signOut12(){
        signOut(auth).then(() => {
@@ -36,45 +37,21 @@
         });
         
 
-
-
-
-
-        const database = firebase.database();
-        const reference = database.ref('/Потребители');
-        
-        // Извлечете данни веднъж (без следене за промени)
-        reference.once('value')
-          .then((snapshot) => {
-            const data = snapshot.val();
-            const nameValue = data.name;
-            alert(nameValue);
-            const lastNameValue = data.lastName;
-            console.log(data);
-          })
-          .catch((error) => {
-            console.error("Грешка при извличане на данни:", error);
+        const user = auth.currentUser;
+        let profileName = '';
+        let profileEmail = '';
+        let profilePhoto = '';
+        if (user !== null) {
+          user.providerData.forEach((profile) => {
+           
+           profileName = profile.displayName;
+           profileEmail = profile.email;
+           profilePhoto = profile.photoURL; 
           });
-
-
-       let emailBox = document.getElementById('email'); 
-
-          const user = auth.currentUser;
-          let email = '';
-          if (user !== null) {
-            // The user object has basic properties such as display name, email, etc.
-            const displayName = user.displayName;
-             email = user.email;
-            const photoURL = user.photoURL;
-            const emailVerified = user.emailVerified;
-          
-            // The user's ID, unique to the Firebase project. Do NOT use
-            // this value to authenticate with your backend server, if
-            // you have one. Use User.getToken() instead.
-            const uid = user.uid;
-          }
-
-       emailBox.textContent = email;
-
-
-
+        }
+        
+        let htmlEmail = document.getElementById('email');
+        let htmlName = document.getElementById('name');
+        
+        htmlName.textContent = profileName; 
+        htmlEmail.textContent = profileEmail; 
