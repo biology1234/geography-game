@@ -20,16 +20,8 @@ const analytics = getAnalytics(app);
 const auth = getAuth();
 const firebase = app;
 
-let signOutBttn = document.getElementById('signOut');
 
 
-signOutBttn.addEventListener('click', function signOut12() {
-  signOut(auth).then(() => {
-    // Sign-out successful.
-    alert('Излизането от профила бе успешно!');
-    window.location.href = "index.html";
-  });
-});
 
 const user = auth.currentUser; 
 
