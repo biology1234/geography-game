@@ -68,7 +68,8 @@
             
            const userEmail = localStorage.getItem('userEmail');
            const email2 = document.getElementById('email');
-           
+           name2.textContent = userName2;
+            email2.textContent = userEmail; 
            
            onAuthStateChanged(auth, (user) => {
     if (user !== null) {
@@ -81,7 +82,7 @@
         } 
         else {
             name2.textContent = userName2;
-            email2.textContent = userEmail;  
+             email2.textContent = userEmail;   
         }
 
         // Останалата част от кода тук...
