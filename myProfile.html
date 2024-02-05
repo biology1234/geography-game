@@ -33,7 +33,7 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
         import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-        import "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";  // Добавете този ред
+        import {getDatabase, ref } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";  // Добавете този ред
    
         const firebaseConfig = {
             apiKey: "AIzaSyB_TgoZVBgp8xqflkvVJbRbPfvTWnyYfOc",
@@ -80,7 +80,7 @@
                 }
             });
 
-            const database = firebase.database();
+            const database = getDatabase();
             const reference = database.ref('/Потребители');
 
             // Извлечете данни веднъж (без следене за промени)
