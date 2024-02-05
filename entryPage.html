@@ -72,8 +72,7 @@
                     const user = userCredential.user;
                     alert('Влизането в профила е успешно!');
                    window.location.href='index.html';
-                   localStorage.setItem('userName', name);
-                   localStorage.setItem('lastName', lastName);
+                   localStorage.setItem('userName', name + ' ' + lastName);
                    localStorage.setItem('userEmail', email);
                 })
                 .catch((error) => {
