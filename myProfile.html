@@ -21,7 +21,7 @@
     <div class="welcomingContainer">
         <h1 class="title">Моят профил</h1>
     </div>
-      
+     <div class="img" id="img"><h1 class="initial" id="initial"></h1></div> 
     <h1 class="dataTopic">Данни:</h1>
     <h1 class="nameData">Имена:<br><span id="name"></span></h1><br>
     <h1 class="emailData">Имейл:<br><span id="email"></span></h1><br>
@@ -64,8 +64,9 @@
                 });
             });
             const userName = localStorage.getItem('userName');
+            const lastName = localStorage.getItem('lastName');
             const name2 = document.getElementById('name');
-            name2.textContent = userName;
+            name2.textContent = userName + '' + lastName;
            const userEmail = localStorage.getItem('userEmail');
            const email2 = document.getElementById('email');
            email2.textContent = userEmail;
@@ -87,7 +88,27 @@
                 } 
             });
 
-        });
+
+        
+  
+  
+        const colors = ['#587C9D', '#649E59', '#9E595B', '#858585', '#BF8045', '#AF84C2', '#BAA7C2'];
+        function getRandomColor() {
+        const randomIndex = Math.floor(Math.random() * colors.length);
+        return colors[randomIndex];
+        }
+
+// Извикване на функцията и извеждане на резултата в конзолата
+     const randomColor = getRandomColor();
+     const img = document.getElementById('img');
+     img.style.background = randomColor;
+
+     let initial = document.getElementById('initial');
+     const firstLetter = name2.textContent[0];
+     const lastLetter = lastName[0];
+     const intial2 = firstLetter + lastLetter;
+     initial.textContent = intial2; 
+});
     </script>
 </body>
 </html>

@@ -53,7 +53,22 @@ body {
     left: 120px;
 }
 
-
+.img{
+  border: 3px solid black;
+  position: relative;
+  width: 60px;
+  position: relative;
+  top: 255px;
+  left: 100px;
+  padding-left: 72px;
+  padding-right: 72px;
+  padding-top: 57px;
+  padding-bottom: 57px;
+  border-radius: 50%;
+}
+.initials {
+  text-align: center;
+}
 
 
 
