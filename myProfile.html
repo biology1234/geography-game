@@ -104,10 +104,12 @@
      img.style.background = randomColor;
 
      let initial = document.getElementById('initial');
-     const firstLetter = name2[0];
-     const lastLetter = lastName[0];
-     const intial2 = firstLetter + lastLetter;
-     initial.textContent = intial2; 
+     const firstLetter = name2.textContent[0];
+     const first2 = firstLetter[0];
+     const lastLetter = name2.textContent[1];
+     const last2 = lastLetter[0];
+     const intial2 = first2 + last2;
+     initial.textContent = intial2;
 });
     </script>
 </body>
