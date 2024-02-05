@@ -128,11 +128,12 @@ if (words.length >= 2) {
     }
     const user = auth.currentUser;
 
-     if (isGoogleAccount = user !== null && user.providerData.some(provider => ['google.com', 'facebook.com', 'github.com'].includes(provider.providerId))) {
+    if (isGoogleAccount === user !== null && user.providerData.some(provider => ['google.com', 'facebook.com', 'github.com'].includes(provider.providerId))) {
+
         img.style.backgroundImage = `url(${user.photoURL})`;
     } 
     else{
-        intialColor()
+        intialColor();
     }
 }});
     </script>
