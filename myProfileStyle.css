@@ -65,7 +65,9 @@ body {
   border-radius: 50%;
 }
 .initials {
-  text-align: center;
+  position: relative;
+  top: 60px;
+  left: 70px;
 }
 
 
