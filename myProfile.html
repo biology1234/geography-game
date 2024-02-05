@@ -75,26 +75,12 @@
 
                     email.textContent = email1;
                     name.textContent = displayName;
-                   name.textContent = name2 + '' + lastName2;
+                    
+                    name.textContent = name2 + '' + lastName2;
                 } else {
                     
                 }
             });
-
-            const database = getDatabase();
-            const usersRef = database.ref('Потребители');
-            // Извлечете данни веднъж (без следене за промени)
-            reference.once('value')
-                .then((snapshot) => {
-                    const data = snapshot.val();
-                    const nameValue = data.name; 
-                  
-                   
-                })
-                .catch((error) => {
-                    alert('error');
-                    console.error("Грешка при извличане на данни:", error);
-                });
         });
     </script>
 </body>
