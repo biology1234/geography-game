@@ -70,9 +70,8 @@
            const email = document.getElementById('email');
            email.textContent = userEmail;
        const user = auth.currentUser; 
-       const userEmail1 = user.email;
+       const userEmail1 = user.displayEmail;
            if (userEmail !== userEmail1){
-            const userEmail1 = user.email;
             email.textContent = userEmail1;
             const displayName = user.displayName; 
             name.textContent = displayName;
