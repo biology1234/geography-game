@@ -63,24 +63,12 @@
                     alert('Грешка, моля опитайте по-късно.');
                 });
             });
-                    let name = document.getElementById('name');
-                    let email = document.getElementById('email');
-            onAuthStateChanged(auth, (user) => {
-                if (user !== null) {
-                    // The user object has basic properties 
-                    const name2 = user.name;
-                    const lastName2 = user.lastName;
-                    const displayName = user.displayName;
-                    const email1 = user.email;
-
-                    email.textContent = email1;
-                    name.textContent = displayName;
-                    
-                    name.textContent = name2 + '' + lastName2;
-                } else {
-                    
-                }
-            });
+            const userName = localStorage.getItem('userName');
+            const name = document.getElementById('name');
+            name.textContent = userName;
+           const userEmail = localStorage.getItem('userEmail');
+           const email = document.getElementById('email');
+           email.textContent = userEmail;
         });
     </script>
 </body>

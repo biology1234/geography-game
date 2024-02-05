@@ -48,33 +48,4 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebas
           });
 
 
-        function generateAvatar() {
-            // Вземете първите букви от името и фамилията
-            let firstName = 
-            const initials = (firstName[0] || '') + (lastName[0] || '');
-      
-            // Създайте canvas елемент
-            const canvas = document.getElementById('avatarCanvas');
-            const ctx = canvas.getContext('2d');
-      
-            // Нарисувайте кръг със случайен цвят
-            ctx.beginPath();
-            ctx.arc(100, 100, 50, 0, 2 * Math.PI);
-            ctx.fillStyle = getRandomColor();
-            ctx.fill();
-      
-            // Напишете първите букви в средата на кръга
-            ctx.font = '30px Arial';
-            ctx.fillStyle = 'white';
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'middle';
-            ctx.fillText(initials, 100, 100);
-          }
-      
-          function getRandomColor() {
-            // Генерирайте случаен цвят в шестнадесетичен формат
-            return '#' + Math.floor(Math.random()*16777215).toString(16);
-          }
-      
-          // Пример за използване
-          generateAvatar();
+        
