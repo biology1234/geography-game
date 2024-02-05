@@ -72,19 +72,17 @@
            
            onAuthStateChanged(auth, (user) => {
     if (user !== null) {
-        // The user object has basic properties 
-        const displayName = user.displayName;
-        const email1 = user.email;
-        alert('OK');
-        if (email2.textContent !== email1) {
-            email2.textContent = email1;
-            name2.textContent = displayName;
-        } else { 
-            alert('error');
-            name2.textContent = userName2;  // Use the correct variable here
-            email2.textContent = userEmail;  // Use the correct variable here
+        // Провери дали потребителят е влязъл с Google акаунт
+        const isGoogleAccount = user.providerData.some(provider => provider.providerId === 'google.com');
+
+        if (isGoogleAccount) {
+            alert('Потребителят е влязъл с Google акаунт.');
+        } else {
+            alert('Потребителят е влязъл с имейл акаунт или друг метод.');
         }
-    } 
+
+        // Останалата част от кода тук...
+    }
 });
 
 
