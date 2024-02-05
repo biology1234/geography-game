@@ -90,7 +90,7 @@
                     const nameValue = data.name; 
                     const lastNameValue = data.lastName;
                     
-                    if (name === null) {
+                    if (name !== undefined) {
                         alert('става');
                         name.textContent = nameValue + ' ' + lastNameValue;
                     }
