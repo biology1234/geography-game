@@ -65,20 +65,23 @@
             });
             const userName2 = localStorage.getItem('userName');
             const name2 = document.getElementById('name');
-            name2.textContent = userName2;
+            
            const userEmail = localStorage.getItem('userEmail');
            const email2 = document.getElementById('email');
-           email2.textContent = userEmail;
+           
            
            onAuthStateChanged(auth, (user) => {
     if (user !== null) {
         // Провери дали потребителят е влязъл с Google акаунт
-        const isGoogleAccount = user.providerData.some(provider => provider.providerId === 'google.com');
+        const isGoogleAccount = user.providerData.some(provider => ['google.com', 'facebook.com', 'github.com'].includes(provider.providerId));
 
         if (isGoogleAccount) {
-            alert('Потребителят е влязъл с Google акаунт.');
-        } else {
-            alert('Потребителят е влязъл с имейл акаунт или друг метод.');
+           name2.textContent = user.displayName;
+           email2.textContent = user.email;    
+        } 
+        else {
+            name2.textContent = userName2;
+            email2.textContent = userEmail;  
         }
 
         // Останалата част от кода тук...
