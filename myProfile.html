@@ -8,42 +8,35 @@
     <title>Моят профил</title>
 </head>
 <body>
-    <div class="header", id="header"onclick="headerscroll()">  
+    <div class="header" id="header" onclick="headerscroll()">  
         <button class="logobttn"><a href="index.html"><img class="logo_img" src="Всичко за кандидат-студентите по медицина-logos_white.png"></a></button>
         
         <div class="linksDiv" > 
-        <a href="index.html" class="links">Начало</a>  
-          <a href="lesson.html" class="links">Преговор</a>  
-          <a href="indexExam.html" class="links">Изпити</a>
-         
+            <a href="index.html" class="links">Начало</a>  
+            <a href="lesson.html" class="links">Преговор</a>  
+            <a href="indexExam.html" class="links">Изпити</a>
         </div>
-       </div>
+    </div>
        
-      <div class="welcomingContainer">
+    <div class="welcomingContainer">
         <h1 class="title">Моят профил</h1>
-      </div>
+    </div>
       
-       <h1 class="dataTopic">Данни:</h1>
-       <h1 class="nameData">Имена:<br><span id="name"></span></h1><br>
-       <h1 class="emailData">Имейл:<br><span id="email"></span></h1><br>
+    <h1 class="dataTopic">Данни:</h1>
+    <h1 class="nameData">Имена:<br><span id="name"></span></h1><br>
+    <h1 class="emailData">Имейл:<br><span id="email"></span></h1><br>
 
-      <button class="signOut" id="signOut">Изход</button>
-    
-    
-    
-    
-    
-    
-    
-      
-      <script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
-  import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+    <button class="signOut" id="signOut">Изход</button>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js"></script>
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyB_TgoZVBgp8xqflkvVJbRbPfvTWnyYfOc",
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        import "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";  // Добавете този ред
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyB_TgoZVBgp8xqflkvVJbRbPfvTWnyYfOc",
             authDomain: "biomedicine-29379.firebaseapp.com",
             databaseURL: "https://biomedicine-29379-default-rtdb.europe-west1.firebasedatabase.app",
             projectId: "biomedicine-29379",
@@ -51,42 +44,62 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebas
             messagingSenderId: "1023601874434",
             appId: "1:1023601874434:web:da6c166d9d0598a237f91b",
             measurementId: "G-58F1VKGWFK"
-  };
+        };
 
-  window.addEventListener('load', (event) => {
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    const auth = getAuth();
+        window.addEventListener('load', () => {
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+            const auth = getAuth();
 
-    let signOutBttn = document.getElementById('signOut');
-    signOutBttn.addEventListener('click', function signOut12() {
-      signOut(auth).then(() => {
-        // Sign-out successful.
-        alert('Излизането от профила бе успешно!');
-        window.location.href = "index.html";
-      }).catch((error) => {
-        // An error happened.
-        alert('Грешка, моля опитайте по-късно.');
-      });
-    });
+            let signOutBttn = document.getElementById('signOut');
+            signOutBttn.addEventListener('click', () => {
+                signOut(auth).then(() => {
+                    // Sign-out successful.
+                    alert('Излизането от профила бе успешно!');
+                    window.location.href = "index.html";
+                }).catch((error) => {
+                    // An error happened.
+                    alert('Грешка, моля опитайте по-късно.');
+                });
+            });
 
-    onAuthStateChanged(auth, (user) => {
-      if (user !== null) {
-        // The user object has basic properties 
-        const displayName = user.displayName;
-        const email1 = user.email;
+            onAuthStateChanged(auth, (user) => {
+                if (user !== null) {
+                    // The user object has basic properties 
+                    const displayName = user.displayName;
+                    const email1 = user.email;
 
-        let name = document.getElementById('name');
-        let email = document.getElementById('email');
+                    let name = document.getElementById('name');
+                    let email = document.getElementById('email');
 
-        email.textContent = email1;
-        name.textContent = displayName;
-      } else {
-        alert('Грешка: Потребителят не е влезнал.');
-      }
-    });
-  });
-      </script>
+                    email.textContent = email1;
+                    name.textContent = displayName;
+                } else {
+                    
+                }
+            });
+
+            const database = firebase.database();
+            const reference = database.ref('/Потребители');
+
+            // Извлечете данни веднъж (без следене за промени)
+            reference.once('value')
+                .then((snapshot) => {
+                    const data = snapshot.val();
+                    const nameValue = data.name; 
+                    const lastNameValue = data.lastName;
+                    
+                    if (name === '') {
+                        alert('става');
+                        name.textContent = nameValue + ' ' + lastNameValue;
+                    }
+                })
+                .catch((error) => {
+                    alert('error');
+                    console.error("Грешка при извличане на данни:", error);
+                });
+        });
+    </script>
 </body>
 </html>
