@@ -70,26 +70,22 @@
            const email2 = document.getElementById('email');
            email2.textContent = userEmail;
            
-            onAuthStateChanged(auth, (user) => {
-                if (user !== null) {
-                    // The user object has basic properties 
-                    const displayName = user.displayName;
-                    const email1 = user.email;
-                    alert('OK');
-                    if (email2.textContent !== email1){
-
-           
-                    email2.textContent = email1;
-                    name2.textContent = displayName;
-                }
-
-                    else { 
-                        alert('error');
-                        name2.textContent = userName2;
-                        email2.textContent = userEmail;
-                    }
-                } 
-            });
+           onAuthStateChanged(auth, (user) => {
+    if (user !== null) {
+        // The user object has basic properties 
+        const displayName = user.displayName;
+        const email1 = user.email;
+        alert('OK');
+        if (email2.textContent !== email1) {
+            email2.textContent = email1;
+            name2.textContent = displayName;
+        } else { 
+            alert('error');
+            name2.textContent = userName;  // Use the correct variable here
+            email2.textContent = userEmail;  // Use the correct variable here
+        }
+    } 
+});
 
 
         
