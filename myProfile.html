@@ -63,33 +63,32 @@
                     alert('Грешка, моля опитайте по-късно.');
                 });
             });
-            const userName = localStorage.getItem('userName');
+            
             const name2 = document.getElementById('name');
-            name2.textContent = userName;
-           const userEmail = localStorage.getItem('userEmail');
-           const email2 = document.getElementById('email');
-           email2.textContent = userEmail;
-           
-            onAuthStateChanged(auth, (user) => {
-                if (user !== null) {
-                    // The user object has basic properties 
-                    const displayName = user.displayName;
-                    const email1 = user.email;
-                    if (email2.textContent !== email1){
 
-           
-                    email2.textContent = email1;
-                    name2.textContent = displayName;}
-                    else { 
-                        name2.textContent = userName;
-                        email2.textContent = userEmail;
-                    }
-                } 
-            });
+          
+           const email2 = document.getElementById('email');
+           const updateUI = (displayName, email) => {
+        name2.textContent = displayName || localStorage.getItem('userName');
+        email2.textContent = email || localStorage.getItem('userEmail');
+    };
+    onAuthStateChanged(auth, (user) => {
+        if (user !== null) {
+            // The user object has basic properties
+            const displayName = user.displayName;
+            const email = user.email;
+
+            if (email2.textContent !== email) {
+                updateUI(displayName, email);
+            } else {
+                updateUI(); // Use local storage values if Firebase values are not changed
+            }
+        }
+    });
 
 
         
-  /*
+  
   
         const colors = ['#587C9D', '#649E59', '#9E595B', '#858585', '#BF8045', '#AF84C2', '#BAA7C2'];
         function getRandomColor() {
@@ -120,7 +119,7 @@ if (words.length >= 2) {
 
      const intial2 = first2 + firstLetterOfSecondWord;
      initial.textContent = intial2;
-}*/});
+}});
     </script>
 </body>
 </html>
