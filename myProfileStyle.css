@@ -54,16 +54,16 @@ body {
 }
 
 .img{
+  background-size: cover;
+ background-position: center;
   border: 3px solid black;
   position: relative;
   width: 60px;
   position: relative;
   top: 255px;
   left: 100px;
-  padding-left: 72px;
-  padding-right: 72px;
-  padding-top: 57px;
-  padding-bottom: 57px;
+  padding-left: 125px;
+  padding-top: 125px;
   border-radius: 50%;
 }
 .initials {
