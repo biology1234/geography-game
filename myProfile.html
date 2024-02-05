@@ -78,64 +78,58 @@
         const isGoogleAccount = user.providerData.some(provider => ['google.com', 'facebook.com', 'github.com'].includes(provider.providerId));
 
         if (isGoogleAccount) {
+         img.style.backgroundImage = `url(${user.photoURL})`;
            name2.textContent = user.displayName;
            email2.textContent = user.email;    
         } 
         else {
             name2.textContent = userName2;
-        email2.textContent = userEmail;   
-        }
-
-        // Останалата част от кода тук...
-    }
-});
-
-
-        
-const img = document.getElementById('img');
-  
+        email2.textContent = userEmail;
         function intialColor(){
        
-        const colors = ['#587C9D', '#649E59', '#9E595B', '#858585', '#BF8045', '#AF84C2', '#BAA7C2'];
-        function getRandomColor() {
-        const randomIndex = Math.floor(Math.random() * colors.length);
-        return colors[randomIndex];
-        }
+       const colors = ['#587C9D', '#649E59', '#9E595B', '#858585', '#BF8045', '#AF84C2', '#BAA7C2'];
+       function getRandomColor() {
+       const randomIndex = Math.floor(Math.random() * colors.length);
+       return colors[randomIndex];
+       }
 
 // Извикване на функцията и извеждане на резултата в конзолата
-     const randomColor = getRandomColor();
-    
-     img.style.background = randomColor;
+    const randomColor = getRandomColor();
+   
+    img.style.background = randomColor;
 
-     let initial = document.getElementById('initial');
-     const firstLetter = userName2;
-     const first2 = firstLetter[0];
-     const fullName = name2.textContent;
+    let initial = document.getElementById('initial');
+    const firstLetter = userName2;
+    const first2 = firstLetter[0];
+    const fullName = name2.textContent;
 
 // Разделяне на текста на думи
 const words = fullName.split(' ');
 
 // Проверка дали има поне две думи
 if (words.length >= 2) {
-    // Вземане на втората дума
-    const secondWord = words[1];
+   // Вземане на втората дума
+   const secondWord = words[1];
 
-    // Вземане на първата буква от втората дума
-    const firstLetterOfSecondWord = secondWord[0];
+   // Вземане на първата буква от втората дума
+   const firstLetterOfSecondWord = secondWord[0];
 
-     const intial2 = first2 + firstLetterOfSecondWord;
-     initial.textContent = intial2;
+    const intial2 = first2 + firstLetterOfSecondWord;
+    initial.textContent = intial2;
+   }
+        }
+
+        // Останалата част от кода тук...
     }
-    const user = auth.currentUser;
+}
+});
 
-    if (isGoogleAccount === user !== null && user.providerData.some(provider => ['google.com', 'facebook.com', 'github.com'].includes(provider.providerId))) {
 
-        img.style.backgroundImage = `url(${user.photoURL})`;
-    } 
-    else{
-        intialColor();
-    }
-}});
+        
+const img = document.getElementById('img');
+  
+        
+});
     </script>
 </body>
 </html>
