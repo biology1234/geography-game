@@ -106,10 +106,22 @@
      let initial = document.getElementById('initial');
      const firstLetter = name2.textContent[0];
      const first2 = firstLetter[0];
-     const lastLetter = name2.textContent[1];
-     const intial2 = first2 + lastLetter;
+     const fullName = name2.textContent;
+
+// Разделяне на текста на думи
+const words = fullName.split(' ');
+
+// Проверка дали има поне две думи
+if (words.length >= 2) {
+    // Вземане на втората дума
+    const secondWord = words[1];
+
+    // Вземане на първата буква от втората дума
+    const firstLetterOfSecondWord = secondWord[0];
+
+     const intial2 = first2 + firstLetterOfSecondWord;
      initial.textContent = intial2;
-});
+}});
     </script>
 </body>
 </html>
