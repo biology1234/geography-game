@@ -74,7 +74,7 @@
                    window.location.href='index.html';
                    localStorage.setItem('userName', name + ' ' + lastName);
                    localStorage.setItem('userEmail', email);
-                });
+                })
                 .catch((error) => {
                     const errorCode = error.code;
                     const errorMessage = error.message;
