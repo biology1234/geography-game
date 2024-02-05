@@ -27,14 +27,14 @@
     <h1 class="emailData">Имейл:<br><span id="email"></span></h1><br>
 
     <button class="signOut" id="signOut">Изход</button>
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js"></script>
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
         import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-        import {getDatabase, ref } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";  // Добавете този ред
-   
+        import "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";  // Добавете този ред
+        // Your web app's Firebase configuration
         const firebaseConfig = {
             apiKey: "AIzaSyB_TgoZVBgp8xqflkvVJbRbPfvTWnyYfOc",
             authDomain: "biomedicine-29379.firebaseapp.com",
@@ -64,18 +64,27 @@
                 });
             });
             const userName = localStorage.getItem('userName');
-            const name = document.getElementById('name');
-            name.textContent = userName;
+            const name2 = document.getElementById('name');
+            name2.textContent = userName;
            const userEmail = localStorage.getItem('userEmail');
-           const email = document.getElementById('email');
-           email.textContent = userEmail;
-       const user = auth.currentUser; 
-       const userEmail1 = user.displayEmail;
-           if (userEmail !== userEmail1){
-            email.textContent = userEmail1;
-            const displayName = user.displayName; 
-            name.textContent = displayName;
-           }
+           const email2 = document.getElementById('email');
+           email2.textContent = userEmail;
+           
+            onAuthStateChanged(auth, (user) => {
+                if (user !== null) {
+                    // The user object has basic properties 
+                    const displayName = user.displayName;
+                    const email1 = user.email;
+                    if (email2 !== email1){
+
+           
+                    email2.textContent = email1;
+                    name2.textContent = displayName;}
+                } else {
+                    alert('Грешка: Потребителят не е влезнал.');
+                }
+            });
+
         });
     </script>
 </body>
