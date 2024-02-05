@@ -93,7 +93,14 @@
         
   
   
-        const colors = ['#587C9D', '#649E59', '#9E595B', '#858585', '#BF8045', '#AF84C2', '#BAA7C2'];
+     
+const user = auth.currentUser;
+ if (isGoogleAccount){
+    img = user.photoURL;
+
+ }
+else {
+    const colors = ['#587C9D', '#649E59', '#9E595B', '#858585', '#BF8045', '#AF84C2', '#BAA7C2'];
         function getRandomColor() {
         const randomIndex = Math.floor(Math.random() * colors.length);
         return colors[randomIndex];
@@ -110,15 +117,7 @@
      const fullName = name2.textContent;
 
 // Разделяне на текста на думи
-
-
-const user = auth.currentUser;
- if (isGoogleAccount){
-    img = user.photoURL;
-
- }
-else {
-    const words = fullName.split(' ');
+const words = fullName.split(' ');
 
 // Проверка дали има поне две думи
 if (words.length >= 2) {
@@ -129,8 +128,9 @@ if (words.length >= 2) {
     const firstLetterOfSecondWord = secondWord[0];
 
      const intial2 = first2 + firstLetterOfSecondWord;
-     initial.textContent = intial2; 
-}}});
+     initial.textContent = intial2;
+} 
+}});
     </script>
 </body>
 </html>
