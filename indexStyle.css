@@ -105,6 +105,7 @@ transform: translate(-50%);
   padding-left:30px ;
   position: fixed;
   width: 98.3%;
+  height: 102px;
   z-index: 1000;
   opacity: 10;
   border-radius: 0  120px  0 120px;
