@@ -133,3 +133,88 @@ function passwordDeactivate () {
        }
       });
    
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+        import { onAuthStateChanged, GithubAuthProvider, getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signInWithRedirect, getRedirectResult, FacebookAuthProvider  } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyB_TgoZVBgp8xqflkvVJbRbPfvTWnyYfOc",
+            authDomain: "biomedicine-29379.firebaseapp.com",
+            databaseURL: "https://biomedicine-29379-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "biomedicine-29379",
+            storageBucket: "biomedicine-29379.appspot.com",
+            messagingSenderId: "1023601874434",
+            appId: "1:1023601874434:web:da6c166d9d0598a237f91b",
+            measurementId: "G-58F1VKGWFK"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getDatabase(app);
+        const auth = getAuth();
+
+        document.getElementById("submitReg").addEventListener('click', function (event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('passwordInput').value;
+            const name = document.getElementById('name').value;
+            const lastName = document.getElementById('lastName').value;
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed up 
+                    const user = userCredential.user;
+                    alert('Влизането в профила е успешно!');
+                   window.location.href='index.html';
+                   localStorage.setItem('userName', name + ' ' + lastName);
+                   localStorage.setItem('userEmail', email);
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    alert('Error');
+                    // ..
+                });
+        });
+
+     
+
+        google.addEventListener('click', (event) => {
+    event.preventDefault();
+    signInWithRedirect(auth, new GoogleAuthProvider()).then(() => {
+        // Handle successful sign-in
+        window.location.href = 'index.html'; // Redirect to the home page
+    }).catch((error) => {
+        // Handle errors if needed
+        console.error(error);
+    });
+});
+
+        const provider = new FacebookAuthProvider();
+         facebook = document.getElementById('facebook');
+        facebook.addEventListener('click', (event) => {
+          event.preventDefault();
+          signInWithRedirect(auth, new FacebookAuthProvider());
+
+        });
+        const provider3 = new GithubAuthProvider();
+         github = document.getElementById('github');
+        github.addEventListener('click', (event) =>{
+          event.preventDefault();
+          signInWithRedirect(auth, new GithubAuthProvider() );
+        });
+        onAuthStateChanged(auth, (user) => {
+    if (user) {
+   window.location.href='index.html';
+    const uid = user.uid;
+    // ...
+
+  } else {
+    // User is signed out
+    // ...
+  
+  }
+});
