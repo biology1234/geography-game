@@ -64,7 +64,8 @@
             event.preventDefault();
             const email = document.getElementById('email').value;
             const password = document.getElementById('passwordInput').value;
-
+            const name = document.getElementById('name');
+            const lastName = document.getElementById('lastName');
             createUserWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
                     // Signed up 
@@ -81,13 +82,7 @@
                 });
         });
 
-        document.getElementById("submitReg").addEventListener('click', function (event) {
-            event.preventDefault();
-            set(ref(db, 'Потребители/' + document.getElementById("name").value), {
-                name: document.getElementById("name").value,
-                lastName: document.getElementById("lastName").value,
-            });
-        });
+     
 
         google.addEventListener('click', (event) => {
     event.preventDefault();

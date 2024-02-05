@@ -63,37 +63,33 @@
                     alert('Грешка, моля опитайте по-късно.');
                 });
             });
-
+                    let name = document.getElementById('name');
+                    let email = document.getElementById('email');
             onAuthStateChanged(auth, (user) => {
                 if (user !== null) {
                     // The user object has basic properties 
+                    const name2 = user.name;
+                    const lastName2 = user.lastName;
                     const displayName = user.displayName;
                     const email1 = user.email;
 
-                    let name = document.getElementById('name');
-                    let email = document.getElementById('email');
-
                     email.textContent = email1;
                     name.textContent = displayName;
+                   name.textContent = name2 + '' + lastName2;
                 } else {
                     
                 }
             });
 
             const database = getDatabase();
-            const reference = database.ref('/Потребители');
-
+            const usersRef = database.ref('Потребители');
             // Извлечете данни веднъж (без следене за промени)
             reference.once('value')
                 .then((snapshot) => {
                     const data = snapshot.val();
                     const nameValue = data.name; 
-                    const lastNameValue = data.lastName;
-                    
-                    if (name !== undefined) {
-                        alert('става');
-                        name.textContent = nameValue + ' ' + lastNameValue;
-                    }
+                  
+                   
                 })
                 .catch((error) => {
                     alert('error');
