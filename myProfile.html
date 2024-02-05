@@ -70,11 +70,11 @@
            const email2 = document.getElementById('email');
            name2.textContent = userName2;
             email2.textContent = userEmail; 
-            const isGoogleAccount = user.providerData.some(provider => ['google.com', 'facebook.com', 'github.com'].includes(provider.providerId));
+           
            onAuthStateChanged(auth, (user) => {
     if (user !== null) {
         // Провери дали потребителят е влязъл с Google акаунт
-       
+        const isGoogleAccount = user.providerData.some(provider => ['google.com', 'facebook.com', 'github.com'].includes(provider.providerId));
 
         if (isGoogleAccount) {
            name2.textContent = user.displayName;
@@ -82,7 +82,7 @@
         } 
         else {
             name2.textContent = userName2;
-             email2.textContent = userEmail;   
+        email2.textContent = userEmail;   
         }
 
         // Останалата част от кода тук...
@@ -122,8 +122,7 @@ if (words.length >= 2) {
 
      const intial2 = first2 + firstLetterOfSecondWord;
      initial.textContent = intial2;
-}
-});
+}});
     </script>
 </body>
 </html>
