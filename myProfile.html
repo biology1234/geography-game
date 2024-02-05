@@ -75,7 +75,7 @@
                     // The user object has basic properties 
                     const displayName = user.displayName;
                     const email1 = user.email;
-                    if (email2 !== email1){
+                    if (email2.textContent !== email1){
 
            
                     email2.textContent = email1;
@@ -84,9 +84,7 @@
                         name2.textContent = userName;
                         email2.textContent = userEmail;
                     }
-                } else {
-                    alert('Грешка: Потребителят не е влезнал.');
-                }
+                } 
             });
 
         });
