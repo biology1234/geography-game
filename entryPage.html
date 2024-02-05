@@ -64,8 +64,8 @@
             event.preventDefault();
             const email = document.getElementById('email').value;
             const password = document.getElementById('passwordInput').value;
-            const name = document.getElementById('name');
-            const lastName = document.getElementById('lastName');
+            const name = document.getElementById('name').value;
+            const lastName = document.getElementById('lastName').value;
             createUserWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
                     // Signed up 
