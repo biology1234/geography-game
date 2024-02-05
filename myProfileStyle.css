@@ -68,7 +68,8 @@ body {
   border-radius: 50%;
 }
 .initial {
- 
+ position: relative;
+ top: 60px;
   text-align: center;
   font-family:'Franklin Gothic Medium';
 
