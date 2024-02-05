@@ -93,7 +93,7 @@
         
   
   
-     
+const img = document.getElementById('img');
 const user = auth.currentUser;
  if (isGoogleAccount){
     img = user.photoURL;
@@ -108,7 +108,7 @@ else {
 
 // Извикване на функцията и извеждане на резултата в конзолата
      const randomColor = getRandomColor();
-     const img = document.getElementById('img');
+     
      img.style.background = randomColor;
 
      let initial = document.getElementById('initial');
