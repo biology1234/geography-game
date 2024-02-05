@@ -69,6 +69,12 @@
            const userEmail = localStorage.getItem('userEmail');
            const email = document.getElementById('email');
            email.textContent = userEmail;
+
+           if (name === null){
+            const user = auth.currentUser; 
+            const displayName = user.displayName; 
+            name.textContent = displayName;
+           }
         });
     </script>
 </body>
