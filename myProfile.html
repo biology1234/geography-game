@@ -83,15 +83,17 @@
            email2.textContent = user.email;    
         } 
         else {
-         name2.textContent = userName2;
+        name2.textContent = userName2;
         email2.textContent = userEmail;
         
+       function getRandomColor(){
+
        
        const colors = ['#587C9D', '#649E59', '#9E595B', '#858585', '#BF8045', '#AF84C2', '#BAA7C2'];
-       function getRandomColor() {
+       
        const randomIndex = Math.floor(Math.random() * colors.length);
        return colors[randomIndex];
-       
+       }
 
 // Извикване на функцията и извеждане на резултата в конзолата
     const randomColor = getRandomColor();
@@ -119,7 +121,7 @@ if (words.length >= 2) {
    }
        
 
-       }       // Останалата част от кода тук...
+              // Останалата част от кода тук...
 }
     }
 });
