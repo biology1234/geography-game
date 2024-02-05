@@ -44,13 +44,16 @@ body {
 .dataTopic{
     text-align: center;
     font-family: 'Noto Sans SC', sans-serif;
+    position: relative;
+    bottom: 120px;
 }
-.nameData, .lastNameData, .emailData{
+.nameData, .emailData{
     text-align: center;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 20px;
     position: relative;
     left: 120px;
+    bottom: 100px;
 }
 
 .img{
