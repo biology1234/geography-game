@@ -63,28 +63,29 @@
                     alert('Грешка, моля опитайте по-късно.');
                 });
             });
-            
+            const userName = localStorage.getItem('userName');
             const name2 = document.getElementById('name');
-
-          
+            name2.textContent = userName;
+           const userEmail = localStorage.getItem('userEmail');
            const email2 = document.getElementById('email');
-           const updateUI = (displayName, email) => {
-        name2.textContent = displayName || localStorage.getItem('userName');
-        email2.textContent = email || localStorage.getItem('userEmail');
-    };
-    onAuthStateChanged(auth, (user) => {
-        if (user !== null) {
-            // The user object has basic properties
-            const displayName = user.displayName;
-            const email = user.email;
+           email2.textContent = userEmail;
+           
+            onAuthStateChanged(auth, (user) => {
+                if (user !== null) {
+                    // The user object has basic properties 
+                    const displayName = user.displayName;
+                    const email1 = user.email;
+                    if (email2.textContent !== email1){
 
-            if (email2.textContent !== email) {
-                updateUI(displayName, email);
-            } else {
-                updateUI(); // Use local storage values if Firebase values are not changed
-            }
-        }
-    });
+           
+                    email2.textContent = email1;
+                    name2.textContent = displayName;}
+                    else { 
+                        name2.textContent = userName;
+                        email2.textContent = userEmail;
+                    }
+                } 
+            });
 
 
         
