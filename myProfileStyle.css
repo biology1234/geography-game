@@ -61,19 +61,19 @@ body {
  background-position: center;
   border: 3px solid black;
   position: relative;
-  top: 255px;
+  top: 155px;
   left: 100px;
   width: 200px;
   height: 200px;
   border-radius: 50%;
 }
 .initial {
-  position: relative;
-  top: 60px;
-  left: 71px;
+ 
+  text-align: center;
   font-family:'Franklin Gothic Medium';
 
 }
+
 
 
 
