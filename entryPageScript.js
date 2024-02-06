@@ -33,11 +33,16 @@
     const containsUpperCase = /[A-Z]/;
     const containsSpecialChar = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
     const containsNumber = /\d/;
+    
     let passwordShowingImg = document.getElementById('passwordShowingImg');
-        function passwordActivate(){
+        
+    
+    
+    
+    function passwordActivate(){
         
       form.style.paddingTop = '300px';
-      form.style.height = '300px';
+      form.style.height = '380px';
       dot1.style.display = 'block';
       dot2.style.display = 'block';
       dot3.style.display = 'block';
@@ -218,3 +223,12 @@ function passwordDeactivate () {
   
   }
 });
+
+
+ 
+
+
+
+
+
+

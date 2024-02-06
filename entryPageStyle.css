@@ -63,7 +63,7 @@ input{
     padding-left: 39px;
     padding-right: 9px;
     padding-top: 100px; 
-    padding-bottom: 66px;
+    padding-bottom: 42px;
     border-radius: 120px 0  0 120px ;
 }
 .title {
@@ -86,6 +86,7 @@ input{
     position: relative;
     bottom: 104px;
     right: 625px;
+    display: none;
 }
 .savingProfile{
     position: relative;
@@ -93,6 +94,7 @@ input{
     right: 535px;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 13px;
+    display: none;
 }
 .submitReg{
     position: relative;
@@ -192,17 +194,17 @@ input{
 .google{
     position: relative;
     bottom: 50px;
-    right: 690px;
+    right: 585px;
 }
 .facebook{
     position: relative;
     bottom: 50px;
-    right: 650px; 
+    right: 525px; 
 }
 .github {
     position: relative;
     bottom: 50px;
-    right: 610px;   
+    right: 465px;   
 }
 .passwordShowingImg{
     height: 17px;
