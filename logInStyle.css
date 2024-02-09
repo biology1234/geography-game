@@ -140,7 +140,10 @@ input{
             height: 300px;
         }
         .infoContainer2{
-            display: none;
+            bottom: 385px;
+            height: 60%;
+           left: 28%;
+           width: 72%;
         }
         .login{
 
@@ -175,5 +178,7 @@ input{
             left: 75%;
             bottom: 64%;
         }
-
+     .title2{
+        top: -22px;
+     }
 }
