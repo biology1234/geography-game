@@ -140,26 +140,25 @@ input{
             height: 300px;
         }
         .infoContainer2{
-            bottom: 411px;
+            bottom: 385px;
             height: 60%;
-           
-           width: 100%;
+           left: 28%;
+           width: 72%;
         }
         .login{
-         left: 340px;
+
            top: 50%;
            transform: translate(-50%);
-           width: 109px;
-           padding-left: 420px;
+           width: 260px;
+           left: 10%;
         }
         .email2, .password2{
             position: relative;
             left: -197px;
             bottom: 242px;
-            font-size: 20px;
         }
         .email2{
-            margin-bottom:25px ;
+            margin-bottom:15px ;
         }
         .submit2{
             right: 230px;
@@ -178,7 +177,7 @@ input{
         }
         .passwordShowingImg2{
             left: 75%;
-            bottom: 60%;
+            bottom: 64%;
         }
      .title2{
         top: -22px;
