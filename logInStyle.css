@@ -25,15 +25,16 @@ input{
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white; 
-    padding-left: 470px;
+    padding-left: 670px;
     padding-top: 316px;
     text-align: center;
     }
     .passwordShowingImg2{
-        height: 17px;
-        position: relative;
-        left: 160px;
-        bottom: 193px;
+        height: 5%;
+        position: absolute;
+        left: 92%;
+        right: 50%;
+        bottom: 60%;
         cursor: pointer; 
     }
     .infoContainer2{
@@ -41,43 +42,57 @@ input{
         left: 0;
         bottom: 0;
         background-color:rgba(81, 128, 216, 0.677);
-        padding-left: 39px;
-        padding-right: 9px;
-        padding-top: 56px; 
-        padding-bottom: 128px;
-        border-radius: 0 120px 120px 0 ;
+        height:100%;
+        width: 55%;
+       
     }
     .title2{
-        position: relative;
-        bottom: 50px;
-        right: 40px;
+        position: absolute;
+        bottom: 75%;
+        right: 45%;
         font-family: 'Caveat', cursive;
         font-size: 35px;
+        
     }
     .informationText2{
-        position: relative;
-        bottom: 30px;
-        right: 5px;
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        bottom: 20%;
+        right: 5%;
         font-family: 'Noto Sans SC', sans-serif;
+        color: white;
     }
     .dontHaveAccount {
         font-family: 'Noto Sans SC', sans-serif;
+        position: absolute;
+        top: 70%;
+        left: 15%;
+        right: 10%;
+        color: white;
+    }
+    .linkReg{
+        color: white;
     }
     .email2{
-        position: relative;
-        bottom: 220px;
+        position: absolute;
+        bottom: 75%;
+        left: 60%;
+        right: 20%;
     }
     .password2{
-        position: relative;
-        bottom: 170px;
+        position: absolute;
+        bottom: 60%;
+        left: 60%;
     }
     .email2, .password2{
         right: 30px;
     }
     .submit2{
-        position: relative;
-        bottom: 148px;
-        right: 20px;
+        position: absolute;
+        top: 45%;
+        right: 10%;
+       
         cursor: pointer;
         background-color: transparent;
         text-align: center;
@@ -91,24 +106,27 @@ input{
         border: 2px black solid;
     }
     .forgetPassword {
-        position: relative;
-        bottom: 70px;
-        right: 60px;
+        position: absolute;
+        bottom: 31%;
+        right: 13%;
+        
+        top: 63%;
+        margin-left: 335px;
         color: black;
         font-family: 'Noto Sans SC', sans-serif;
     }
     .google2{
-        position: relative;
-        bottom: 40px;
-        right: 200px;
+        position: absolute;
+        bottom: 15%;
+        right: 32%;
     }
     .facebook2{
-        position: relative;
-        bottom: 40px;
-        right: 155px;
+        position: absolute;
+        bottom: 15%;
+        right: 22%;
     }
     .github2{
-        position: relative;
-        bottom: 40px;
-        right: 110px;
+        position: absolute;
+        bottom: 15%;
+        right: 12%;
     }

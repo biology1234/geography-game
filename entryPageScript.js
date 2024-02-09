@@ -61,7 +61,7 @@
       facebook.style.bottom = '240px';
       github.style.bottom = '240px';
 
-      informationContainer.style.paddingTop = '290px';
+      informationContainer.style.paddingTop = '390px';
       title.style.bottom = '265px';
       informationText.style.bottom = '175px';
       haveAccount.style.bottom = '115px';

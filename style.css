@@ -138,7 +138,8 @@ body, html {
 
 footer {
   position: absolute;
-  bottom:inherit;
-  
+  bottom:0;
+  top: 100%;
+  transform: translate(-100%);
 
 }
