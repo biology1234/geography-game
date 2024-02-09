@@ -143,6 +143,9 @@ input{
             display: none;
         }
         .login{
+
+           top: 50%;
+           transform: translate(-50%);
            width: 260px;
         }
         .email2, .password2{
