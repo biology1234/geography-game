@@ -150,6 +150,8 @@ input{
            top: 50%;
            transform: translate(-50%);
            width: 260px;
+           left: 10%;
+           right: 10%;
         }
         .email2, .password2{
             position: relative;
