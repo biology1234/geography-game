@@ -9,22 +9,28 @@
 </head>
 <body>
     <form class="login" id="login">
+      
         <input class="email2" id="email2" placeholder="Въведете имейл" type="email" required>
         <input class="password2" type="password" placeholder="Въведете парола" required id="password2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}([!@#$%^&*()_+{}\[\]:;,.?~\\/-])?" title="Моля, запишете парола по дадените изисквания"><br>
       <img src="4779893-200.png" class="passwordShowingImg2" id='passwordShowingImg2' onclick="passwordShowing()">
       
-      <div class="infoContainer2">
-              <h2 class="title2" id="title2">Вход</h2>
-              <p class="informationText2" id="informationText">За да използвате пълната функционалност на <br>уеб приложението, трябва да влезете.<br>Просто попълнете полетата или влезте с <br>  Google, Facebook или GitHub акаунт.</p>
-              <p class="dontHaveAccount" id="dontHaveAccount">Нямате акаунт? Рeгистрирате от <a href="entryPage.html" id="dontHaveAccountLink" class="linkReg">тук.</a></p>
-    
-    </div> 
+      
     <a href="forgetPassword.html" class="forgetPassword">Забравена парола</a>
     <input type="submit" id="submit2" value="Вход" class="submit2"> 
           <a href="#" class="google2" id="google2"><i class="fa-brands fa-google"></i></a>  
           <a href="#" class="facebook2" id="facebook2"><i class="fa-brands fa-facebook"></i></a> 
           <a href="#" class="github2" id="github2"><i class="fa-brands fa-github"></i></a>
-      </form>
+    
+    
+    
+          <div class="infoContainer2">
+              <h2 class="title2" id="title2">Вход</h2>
+              <p class="informationText2" id="informationText">За да използвате пълната функционалност на <br>уеб приложението, трябва да влезете.<br>Просто попълнете полетата или влезте с <br>  Google, Facebook или GitHub акаунт.</p>
+              <p class="dontHaveAccount" id="dontHaveAccount">Нямате акаунт? Рeгистрирате от <a href="entryPage.html" id="dontHaveAccountLink" class="linkReg">тук.</a></p>
+    
+    </div>
+  
+    </form>
       <script type="module" src="logInScript.js"></script>
 </body>
 </html>

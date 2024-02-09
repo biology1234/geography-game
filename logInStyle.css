@@ -44,7 +44,7 @@ input{
         background-color:rgba(81, 128, 216, 0.677);
         height:100%;
         width: 55%;
-       
+     
     }
     .title2{
         position: absolute;
@@ -130,3 +130,41 @@ input{
         bottom: 15%;
         right: 12%;
     }
+
+    /*За телефон*/
+
+    @media screen and (max-width: 480px) {
+        .infoContainer2{
+            display: none;
+        }
+        .login{
+           width: 20px;
+        }
+        .email2, .password2{
+            position: relative;
+            left: -435px;
+            bottom: 242px;
+        }
+        .email2{
+            margin-bottom:15px ;
+        }
+        .submit2{
+            right: 230px;
+        }
+        .forgetPassword{
+            right: 275px;
+        }
+        .google2{
+            right: 420px;
+        }
+        .facebook2 {
+            right: 320px;
+        }
+        .github2{
+            right: 220px;
+        }
+        .passwordShowingImg2{
+            left: 65%;
+            bottom: 64%;
+        }
+}
