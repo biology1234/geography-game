@@ -26,23 +26,25 @@
     let informationText = document.getElementById('informationText'); 
     let haveAccount = document.getElementById('haveAccount');
 
-    input.addEventListener('input', passwordActivate);
-    input.addEventListener('blur', passwordDeactivate);
-
     const eightChapter = /^.{8,}$/;
     const containsUpperCase = /[A-Z]/;
     const containsSpecialChar = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
     const containsNumber = /\d/;
     
     let passwordShowingImg = document.getElementById('passwordShowingImg');
-        
+    let PasswordRequests = document.getElementById('PasswordRequests');     
     
-    
-    
+    input.addEventListener('input', passwordActivate);
+    input.addEventListener('blur', passwordDeactivate);
+    const email = document.getElementById('email');
+            const password = document.getElementById('passwordInput');
+            const name = document.getElementById('name');
+            const lastName = document.getElementById('lastName');
     function passwordActivate(){
         
       form.style.paddingTop = '300px';
-      form.style.height = '380px';
+      form.style.height = '160px';
+
       dot1.style.display = 'block';
       dot2.style.display = 'block';
       dot3.style.display = 'block';
@@ -52,20 +54,28 @@
       p2.style.display = 'block';
       p3.style.display = 'block';
       p4.style.display = 'block';
-         
+
+      
+      PasswordRequests.style.display = 'block';
       checkBox1.style.bottom = '285px';
       savingProfile.style.bottom = '307px';
-      submitReg.style.bottom = '290px';
+      submitReg.style.top = '70%';
 
-      google.style.bottom = '240px';
-      facebook.style.bottom = '240px';
-      github.style.bottom = '240px';
+      google.style.bottom = '40px';
+      facebook.style.bottom = '40px';
+      github.style.bottom = '40px';
 
-      informationContainer.style.paddingTop = '390px';
-      title.style.bottom = '265px';
-      informationText.style.bottom = '175px';
-      haveAccount.style.bottom = '115px';
-      passwordShowingImg.style.bottom='187px';
+      informationContainer.style.paddingTop = '0px';
+      title.style.bottom = '370px';
+      informationText.style.bottom = '220px';
+      haveAccount.style.bottom = '150px';
+      passwordShowingImg.style.bottom='285px';
+
+
+      name.style.top = '30px';
+      lastName.style.top = '70px';
+      email.style.top = '110px';
+      password.style.top = '150px';
 
       if (eightChapter.test(input.value)){
          dot1.style.background = 'green';
@@ -110,11 +120,11 @@ function passwordDeactivate () {
       checkBox1.style.bottom = '';
       savingProfile.style.bottom = '';
       submitReg.style.bottom = '';
-
+      submitReg.style.top = '';
       google.style.bottom = '';
       facebook.style.bottom = '';
       github.style.bottom = '';
-
+      PasswordRequests.style.display = '';
       informationContainer.style.paddingTop = '';
       title.style.bottom = '';
       informationText.style.bottom = '';

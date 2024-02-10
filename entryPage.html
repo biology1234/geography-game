@@ -22,10 +22,11 @@
         <input class="email" type="email" placeholder="Въведете имейл" required id="email"><br>
         <input class="password" type="password" placeholder="Въведете парола" required id="passwordInput" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}([!@#$%^&*()_+{}\[\]:;,.?~\\/-])?" title="Моля, запишете парола по дадените изисквания"><br>
         <img src="4779893-200.png" class="passwordShowingImg" id='passwordShowingImg' onclick="passwordShowing()">
-        <span class="dot1" id="dot1"></span><p class="p1" id="p1">Паролата трябва да съдържа <br> минимум 8  символа.</p> <br>
-        <span class="dot2" id="dot2"></span><p class="p2" id="p2"> Паролата трябва да съдържа поне 1<br> главна буква. </p> <br>
-        <span class="dot3" id="dot3"></span><p class="p3" id="p3">Паролата трябва да съдържа поне 1<br> специален знак.</p> <br>
-        <span class="dot4" id="dot4"></span><p class="p4"id="p4">Паролата трябва да съдържа поне 1<br> цифра.</p><br>
+        <p class="PasswordRequests" id="PasswordRequests">Паролата трябва да съдържа:</p>
+        <span class="dot1" id="dot1"></span><p class="p1" id="p1"> минимум 8  символа.</p> <br>
+        <span class="dot2" id="dot2"></span><p class="p2" id="p2">  поне 1 главна буква. </p> <br>
+        <span class="dot3" id="dot3"></span><p class="p3" id="p3"> поне 1 специален знак.</p> <br>
+        <span class="dot4" id="dot4"></span><p class="p4"id="p4"> поне 1 цифра.</p><br>
         <input type="checkbox" class="checkBox1" id="checkbox1"><span class="savingProfile" id="savingProfile">Запазване на профила?</span>
 
         <input type="submit" class="submitReg" value="Регистрация"  id="submitReg">
