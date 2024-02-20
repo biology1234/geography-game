@@ -54,113 +54,31 @@ hr{
     padding-left: 320px;
     padding-top: 420px;
     border-radius: 0 0 100px 100px;
-    text-align: center;
 }
+
 .title{
     color: white;
-    position: absolute;
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%, -50%);
+   text-align: center;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 34px;
+    position: static;
+    margin-top: -290px;
+    margin-left: -290px;
    
 }
-.titleImg{
-    height: 150px;
-    position: relative;
-    bottom: 150px;
-    left: 120px;
-}
-.tissue{
-   font-size: 34px;
-}
-.p1 {
-    position: relative;
-    top: -12px;
-    font-size: 15px;
-}
-.sketchfab-embed-wrapper{
-    position: absolute;
-   transform: translate(-50%, -50%);
-    left: 50%;
-    top: 44%;
-}
 
-.p2 {
-    position: relative;
-    top:420px;
-}
-.boldText2{
-    position: relative;
-    top:480px;
-}
-.middleText1{
-  position: relative;
-  top:520px;
-  font-size:22px;
-}
-.smallText1{
-    position: relative;
-    top:550px;
-}
-.plosykEpitel{
-    position: relative;
-    top:570px;
-}
-
-.smallText2{
-    position: relative;
-    top:590px;
-}
-.prizmati4enEpitel{
-    position: relative;
-    top: 600px;
-}
-.smallText3{
-    position: relative;
-    top: 620px;
-}
-.kubichenEpitel{
-    position: relative;
-    top: 630px;
-}
-.nevrqgov, .vrogovrq6t{
-    position: relative;
-    top: 650px; 
-}
 .mnogosloen{
-    position: relative;
-    top: 660px;
+    height: 100px;
+    position: absolute;
+    top: 1255px;
 }
-.boldText4{
+.plosyk {
     position: relative;
-    top: 670px;
+    right: 325px;
+    top: -30px;
 }
-.smallText4{
-    position: relative;
-    top:680px;
-}
-.middleText2{
-    font-size:22px;
-}
-.image5{
-    position: relative;
-    top: 730px;
-}
-.smallText5{
-    position: relative;
-    top:800px;
-}
-.image6{
-    position: relative;
-    top: 820px;
-}
-.smallText6{
-    position: relative;
-    top: 840px;
-}
-.image7{
-    position: relative;
-    top: 860px;
+.prizmatichen{
+      position: relative;
+      right: 300px;
+      top: 30px;
 }

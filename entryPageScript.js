@@ -129,7 +129,7 @@ function passwordDeactivate () {
       title.style.bottom = '';
       informationText.style.bottom = '';
       haveAccount.style.bottom = '';
-      passwordShowingImg.style.bottom='';
+      passwordShowingImg.style.bottom = '';
       if (pat1.test(input.value)){
         dot1.style.background = '';
      }

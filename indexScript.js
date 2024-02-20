@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
  let start = 0;
 let question1 = 'Какво е ключовото в тази платформа?';
 let smallTextInnerElement = document.getElementById('question1');
-let speed2 = 105;
+let speed2 = 120;
 let scroll = 0;
 
 function typeWriter2() {
@@ -66,11 +66,22 @@ addEventListener('scroll', function coloredText1(event) {
           text3.style.color = '#43B68A';
         }
 
+      
+
+      const howTo1 = document.getElementById('howTo1');
+
+      let scroll4 = 0;
+      this.addEventListener('scroll', function colorText4(){
+        scroll4 = this.window.pageYOffset; 
+        if (scroll4 >= 920){
+          howTo1.style.color = '#6C5BC2';
+        }
       });
+   });   
   const header = document.getElementById('header');
 
 addEventListener('scroll', function headerscroll() {
-  if (window.scrollY > 420) {
+  if (window.scrollY > 470) {
     header.classList.add('fixed-header');
   }
   else {

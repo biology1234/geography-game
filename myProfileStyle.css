@@ -47,13 +47,21 @@ body {
     position: relative;
     bottom: 120px;
 }
-.nameData, .emailData{
+.nameData {
     text-align: center;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 20px;
     position: relative;
     left: 120px;
     bottom: 100px;
+}
+.emailData{
+  text-align: center;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 20px;
+  position: relative;
+  left: 120px;
+  bottom: 100px;
 }
 
 .img{
@@ -75,9 +83,20 @@ body {
 
 }
 
+.myResults{
+  text-align: center;
+}
 
+.test1Result{
+ position: absolute;
+ left: 10%;
+}
 
-
+.resultData1{
+  position: absolute;
+  left: 40%;
+  bottom: 2px;
+}
 
 
 

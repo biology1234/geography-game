@@ -30,7 +30,7 @@ body, html {
 .links {
   position: relative;
   top:12px;
-  right: 120px;
+  right: 165px;
   margin-right: 20px;
   text-decoration: none;
   color: white;
@@ -82,12 +82,8 @@ body, html {
  .fixed-header{
    padding-left:30px;
    position: fixed;
-   width: 95%;
+   width: 100%;
    z-index: 1004;
-   
-   opacity: 10;
-
-   border-radius: 0  120px  0 120px;
    background-color: rgb(65, 104, 133);
    }
   .links2 {
@@ -105,7 +101,7 @@ body, html {
 .myProfileBttn{
   position: relative;
   bottom: 22px;
-  left: 200px;
+  left: 160px;
   background-color: transparent;
   border: 2px white solid;
   padding-left: 15px;
@@ -122,7 +118,7 @@ body, html {
 .logInBttn{
   position: relative;
   bottom: 22px;
-  left: 200px;
+  left: 160px;
   background-color: transparent;
   border: 2px white solid;
   padding-left: 50px;
