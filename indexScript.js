@@ -73,7 +73,7 @@ addEventListener('scroll', function coloredText1(event) {
       let scroll4 = 0;
       this.addEventListener('scroll', function colorText4(){
         scroll4 = this.window.pageYOffset; 
-        if (scroll4 >= 920){
+        if (scroll4 >= 1020){
           howTo1.style.color = '#6C5BC2';
         }
       });
