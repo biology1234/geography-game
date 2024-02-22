@@ -131,3 +131,23 @@ logInBttn.style.display = 'block';
 myProfileBttn.style.display='none';
 }
 });
+
+
+let topBttn = document.getElementById('topBttn');
+let scroll5 = 0;
+
+addEventListener('scroll', function() {
+  if (window.pageYOffset >= 30) {
+    topBttn.style.display = 'block';
+  } else {
+    topBttn.style.display = 'none';
+  }
+
+
+topBttn.addEventListener('click', function(){
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+
+
+});
+});

@@ -1,6 +1,7 @@
 body {
-    height: 200vh;
+    height: 100vh;
     overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
 }
 .header{
     background-color: rgb(65, 104, 133);
@@ -12,40 +13,136 @@ body {
 #entryHeaderBttn{
     color: white;
 }
-.infoContainer {
+.container{
+    background-color: white;
     text-align: center;
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    filter: blur(4px);
     font-family: 'Montserrat', sans-serif;
 }
-hr{
-    width: 780px;
-}
-
-.tissueTopic{
-    font-size: 24px;
-    margin-left: 28px;
-}
-
-  
-.tissueContainer {
-    top: 760px;
-    border: 3px solid black;
-    width: 120vh;
+.start {
     position: absolute;
+    bottom: 5%;
     left: 50%;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     transform: translate(-50%);
-    padding: 10px;
-    border-radius: 30px;
+    background-color: transparent;
+    border-radius: 40px;
+    border: 3px solid black;
+    cursor: pointer;
 }
-.exclamationMark{
-    height: 80px;
-    position: relative;
-    bottom:80px;
-    right: 470px;
-}
-.boldText1{
-    position: relative;
-    top:420px;
-   
-    font-size: 36px;
+.start:hover{
+    background-color:rgb(65, 104, 133) ;
+color: white;
 }
 
+.bluredLogIn{
+    background-color: rgb(255, 255, 255);
+    width: 30%;
+    height: 50%;
+    position: fixed;
+    text-align: center;
+    left: 35%;
+    top: 25%;
+    border: 3px solid black;
+
+}
+.email2{
+    text-align: left;
+    padding-top: 10px;
+    width:60%;
+    border-bottom: 2px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    
+}
+
+.password2{
+    text-align: left;
+    padding-top: 15px;
+    width:60%;
+    border-bottom: 2px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    
+}
+.passwordShowingImg2{
+    height: 5%;
+    position: absolute;
+    left: 72%;
+    right: 50%;
+    bottom: 58%;
+    cursor: pointer; 
+}
+
+.forgetPassword {
+    position: absolute;
+    bottom: 31%;
+    left: 36.5%;
+    top: 58%;
+   margin-top: 5%;
+    color: black;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+.submit2{
+    position: absolute;
+    top: 45%;
+    right: 30%;
+   margin-top: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    text-align: center;
+    border: 1px black solid;
+    border-radius: 40px;
+    width: 40%;
+    height: 10%;
+}
+.submit2:hover{
+    background-color: rgba(81, 128, 216, 0.677);
+    border: 2px black solid;
+}
+.google2{
+    position: absolute;
+    bottom: 15%;
+    right: 72%;
+}
+.facebook2{
+    position: absolute;
+    bottom: 15%;
+    right: 52%;
+}
+.github2{
+    position: absolute;
+    bottom: 15%;
+    right: 32%;
+}
+
+.h1Blured{
+    font-size: 18px;
+}
+
+.reg{
+    color: black;
+    position: absolute;
+    top: 90%;
+    right: 39%;
+}

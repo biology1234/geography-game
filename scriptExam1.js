@@ -48,3 +48,29 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebas
                 });
                   
                })
+
+            
+               const timerElement = document.getElementById("timer");
+               const startTime = Date.now();
+               const endTime = startTime + (2 * 60 * 60 * 1000); // 2 часа в милисекунди
+       
+               const updateTimer = () => {
+                   const currentTime = Date.now();
+                   const remainingTime = endTime - currentTime;
+       
+                   const hours = Math.floor(remainingTime / (1000 * 60 * 60));
+                   const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+                   const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+       
+                   timerElement.textContent = `${hours} часа, ${minutes} минути`;
+       
+                   if (remainingTime <= 0) {
+                       clearInterval(interval);
+                       timerElement.textContent = "Времето изтече!";
+                   }
+               };
+       
+               const interval = setInterval(updateTimer, 1000); // Актуализира таймера всяка секунда
+       
+               updateTimer();
+     

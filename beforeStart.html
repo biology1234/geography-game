@@ -6,8 +6,9 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="beforeStartStyle.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    </head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+      </head>
     <body class="bodyLessonsPage">
       
         <div class="header", id="header"onclick="headerscroll()">  
@@ -16,22 +17,39 @@
             <div class="linksDiv" id="linksDiv" > 
             <a href="index.html" class="links" id="links">Начало</a>  
               <a href="lesson.html" class="links", id="links">Преговор</a>  
-              <a href="indexExam.html" class="links" id="links">Изпити</a>
+              <a href="beforeStart.html" class="links" id="links">Изпити</a>
       
             </div>
            </div>
           
-        <div class="infoContainer">
-          <div class="titleScreen">
-            <h1 class="title">Преди да започнете</h1>
-          </div>
-          </div>
+      <div class="container">
+        <h1 class="title">Преди да започнете:</h1><br>
+        <p class="description">  Добре дошли в подготвителните изпити на BioMedicine за МУ София!
+                               Преди да започнете работа е необходимо да се изяснят неща.<br><br> 
+                               Разполагате с време за работа от два астономически часа. В горния десен ъгъл имате таймер, с помощта на който може да видите колко време ви остава.<br> При изтичане на времето изпитът автоматично се предава. Може да попълвате изпита неограничен брой пъти. Резултатите може да ги видите или след като предадете, 
+                               или в секцията "Моят профил".<br> <br>Изпитът съдържа три типа задачи: <br> -  избираем отговор  <br> - свободен отговор <br> - с разширен отговор<br><br> Тъй като няма как да се 
+                               проверят задачи със схематично представяне биологични структури ще има възможност вместо да чертаете да наредите пъзел. Тъй като и задачите с описване няма как 
+                               след като предадете изпита ще имате информация под дадените въпроси. <br>
+                               <br>Това е всичко, което трябва да знаете. УСПЕХ!
+                                </p><br><br>
+             <input type="button" value="Започни изпита" class="start" onclick="window.location='indexExam.html'"><br>  
 
-          <div class="beforeStartContainer">
-           <h1 class="beforeStartReadThis">Преди започнете с примерния изпит, прочетете това:</h1>         
-           <p class="information">Добре дошли с примерния кандадстудентски изпит по медицина, част биология и здравно образование. Изпитът съдържа ..... броя въпроса, съобразени с материала, които се включва.Времето за работа  е 2 астрономически часа (защото няма чертаене на схеми и описване на задачи).След като изтече това време изпитът автоматично се предава и показва резултатът, който може да се види по всяко време. Също така трябва да се съобразите с изискванията на задачите с кратък, свободен отговор, посочени до самата задача  </p>
-          </div>
- 
+      </div>
+
+      <div class="bluredLogIn">
+        <h1 class="h1Blured">За да преминете към изпита първо трябва да влезете в профила Ви.</h1>
+        <input class="email2" id="email2" placeholder="Въведете имейл" type="email" required><br><br><br>
+        <input class="password2" type="password" placeholder="Въведете парола" required id="password2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}([!@#$%^&*()_+{}\[\]:;,.?~\\/-])?" title="Моля, запишете парола по дадените изисквания"><br>
+      <img src="4779893-200.png" class="passwordShowingImg2" id='passwordShowingImg2' onclick="passwordShowing()">  
+      <a href="forgetPassword.html" class="forgetPassword">Забравена парола</a>
+        <input type="submit" id="submit2" value="Вход" class="submit2"> 
+          <a href="#" class="google2" id="google2"><i class="fa-brands fa-google"></i></a>  
+          <a href="#" class="facebook2" id="facebook2"><i class="fa-brands fa-facebook"></i></a> 
+          <a href="#" class="github2" id="github2"><i class="fa-brands fa-github"></i></a>
+
+          <a href="entryPage.html" class="reg">Регистрация</a>
+      </div>
       
+      <script type="module" src="beforeStart.js"></script> 
     </body>
 </html>

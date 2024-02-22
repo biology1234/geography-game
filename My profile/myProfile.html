@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="myProfileStyle.css">
+    <title>Моят профил</title>
+</head>
+<body>
+    <div class="header" id="header" onclick="headerscroll()">  
+        <button class="logobttn"><a href="index.html"><img class="logo_img" src="Всичко за кандидат-студентите по медицина-logos_white.png"></a></button>
+        
+        <div class="linksDiv" > 
+            <a href="index.html" class="links">Начало</a>  
+            <a href="lesson.html" class="links">Преговор</a>  
+            <a href="indexExam.html" class="links">Изпити</a>
+        </div>
+    </div>
+       
+    <div class="welcomingContainer">
+        <h1 class="title">Моят профил</h1>
+    </div>
+     <div class="img" id="img"><h1 class="initial" id="initial"></h1></div> 
+    <h1 class="dataTopic">Данни:</h1>
+    <h1 class="nameData">Имена:<br><span id="name"></span></h1><br>
+    <h1 class="emailData">Имейл:<br><span id="email"></span></h1><br>
+    
+    <h1 class="myResults">Постигнати резултати:</h1>
+    <span class="test1Result"> Изпит №1 (МУ София):</span>
+    <p id="resultData1" class="resultData1">21 точки</p>
+    <button class="signOut" id="signOut">Изход</button>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js" type="module"></script>
+
+    <script type="module" src="myProfileScript.js"></script>
+</body>
+</html>

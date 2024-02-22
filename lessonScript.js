@@ -49,3 +49,4 @@ addEventListener('scroll', function coloredText4(event) {
     text4.style.color = "#F4BC1C";
   }
 });
+
