@@ -2,7 +2,7 @@ body {
     height: 100vh;
     overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
-    position: fixed;
+    
 }
 .header{
     background-color: rgb(65, 104, 133);
@@ -148,33 +148,52 @@ color: white;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
+hr{
+    display: none;
+}
 
 
 @media screen  and (max-width: 415px ){
     body, html{
         height: 100vh;
+        position: fixed;
     }
    .bluredLogIn {
     width: 300px;
     position: relative;
     left: 45px;
-    top: 130px;
+    top: 160px;
    }
-   .links{
-    right: 10px;
+   .linksDiv{
+    background-color: rgb(65, 104, 133);
+    padding-left: 290px;
+    position: relative;
+    top: 80px;
+    right: 165px;
+   }
+   #links-home{
+    top: 41px;
+    right: 290px;
+   }
+   #links-lessons{
+   top: 13px;
+   right: 155px;
+   }
+   #links-exams{
+    top:-13px;
+    right: 52px;
    }
    .container{
     display: none;
    }
-   #links-home{
+ 
+   .hr1{
+    display: block;
     position: relative;
-    top: 105px;
-    right: 100px;
-    background-color: #2a9eb055;
-    padding-left: 102px;
-    padding-right: 102px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    top: 100px;
+   }
+   .logo_img{
+    position: relative;
+right: -115px;
    }
 }
