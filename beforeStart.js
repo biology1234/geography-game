@@ -102,7 +102,10 @@ const uid = user.uid;
 }
 });
 
+document.addEventListener('touchmove', function(event){
+event.preventDefault();
 
+});
 
 const passwordShowingImg2 = document.getElementById('passwordShowingImg2');
 let password2 = document.getElementById('password2');

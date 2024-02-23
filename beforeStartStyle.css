@@ -151,6 +151,9 @@ color: white;
 
 
 @media screen  and (max-width: 415px ){
+    body, html{
+        height: 100vh;
+    }
    .bluredLogIn {
     width: 300px;
     position: relative;
@@ -159,5 +162,18 @@ color: white;
    }
    .links{
     right: 10px;
+   }
+   .container{
+    display: none;
+   }
+   #links-home{
+    position: relative;
+    top: 105px;
+    right: 100px;
+    background-color: #2a9eb055;
+    padding-left: 102px;
+    padding-right: 102px;
+    padding-top: 10px;
+    padding-bottom: 10px;
    }
 }
