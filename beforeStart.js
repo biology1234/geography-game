@@ -34,7 +34,7 @@ const container = document.getElementById('container');
  
    } else {
      bluredLogIn.style.display ='block';
-     container.style.filter ='none';
+     container.style.display ='none';
    }
  });
 
