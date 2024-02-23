@@ -2,6 +2,7 @@ body {
     height: 100vh;
     overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
+    position: fixed;
 }
 .header{
     background-color: rgb(65, 104, 133);
