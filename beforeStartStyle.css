@@ -147,3 +147,17 @@ color: white;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+
+@media screen  and (max-width: 415px ){
+   .bluredLogIn {
+    width: 300px;
+    position: relative;
+    left: 45px;
+    top: 130px;
+   }
+   .links{
+    right: 10px;
+   }
+}
