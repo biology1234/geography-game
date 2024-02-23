@@ -166,6 +166,7 @@ hr{
         position: fixed;
         bottom: 610px;
         z-index: 2;
+        padding-top: 120px;
     }
    .bluredLogIn {
     width: 300px;
