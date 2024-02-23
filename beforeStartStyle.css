@@ -164,7 +164,7 @@ hr{
     }
     .header{
         position: fixed;
-        bottom: 630px;
+        bottom: 610px;
         z-index: 2;
     }
    .bluredLogIn {
