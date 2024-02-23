@@ -30,11 +30,11 @@ const container = document.getElementById('container');
      
      const uid = user.uid;
      bluredLogIn.style.display = 'none';
-     container.style.filter = 'none';
+     container.style.filter = 'block';
  
    } else {
      bluredLogIn.style.display ='block';
-     container.style.filter ='blur(4px)';
+     container.style.filter ='none';
    }
  });
 

@@ -21,7 +21,6 @@ body {
     position: absolute;
     left: 25%;
     top: 25%;
-    filter: blur(4px);
     font-family: 'Montserrat', sans-serif;
 }
 .start {
