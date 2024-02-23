@@ -152,7 +152,7 @@ hr{
 }
 
 
-@media screen  and (max-width: 415px ){
+@media screen  and (max-width: 450px ){
     body, html{
         height: 150vh;
         
@@ -212,6 +212,6 @@ hr{
    }
    .passwordShowingImg2{
     height: 22px;
-    bottom: 363px;
+    bottom: 353px;
    }
 }
