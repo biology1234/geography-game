@@ -173,13 +173,12 @@ top: 45%;
 }
 .descriptionUser{
  top: 55%;
-padding-right: 70px;
-padding-bottom: 60px;
+height: 70px;
 }
 .submitFeedback{
 top: 80%;
 position: absolute;
-left: 77%;
+left: 76%;
 border-radius: 40px;
 padding-left: 60px;
 padding-right: 60px;
@@ -191,7 +190,7 @@ cursor: pointer;
 .nameFooter, .emailFotter, .descriptionUser{
   position: absolute;
   left: 75%;
-  padding-right: 70px;
+  width: 200px;
 }
 .feedBack{
   font-family: 'Caveat', cursive; 

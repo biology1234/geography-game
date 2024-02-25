@@ -19,7 +19,8 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 document.getElementById('feedback').addEventListener('submit', function (event){
-    
+    event.preventDefault();
+    location.reload();
    set(ref(db, 'Обратна връзка/'+ document.getElementById('name').value ),
     {
         Имема: document.getElementById('name').value,
