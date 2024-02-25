@@ -38,9 +38,9 @@ hr{
 }
 .Bttn1{
 
-    position: absolute;
-    left: 50%;
-    top: 70%;
+    position: relative;
+    left: 50px;
+    top: 120px;
     transform: translate(-50%, -50%);
     padding-left: 150px ;
     padding-right: 150px;

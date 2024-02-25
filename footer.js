@@ -17,15 +17,17 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const db = getDatabase(app);
-
-document.getElementById('feedback').addEventListener('submit', function (event){
+let form = document.getElementById('feedback');
+form.addEventListener('submit', function (event){
     event.preventDefault();
-    location.reload();
+    alert('Вашето съобщение е успешно изпратено!');
    set(ref(db, 'Обратна връзка/'+ document.getElementById('name').value ),
     {
         Имема: document.getElementById('name').value,
         Имейл: document.getElementById('email').value,
         Съобщение: document.getElementById('feedBack').value
     })
-   
+    setTimeout(function () {
+        location.reload();
+    }, 1000);
 });
