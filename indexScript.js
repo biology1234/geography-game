@@ -139,7 +139,12 @@ let scroll5 = 0;
 addEventListener('scroll', function() {
   if (window.pageYOffset >= 30) {
     topBttn.style.display = 'block';
-  } else {
+  } 
+  
+  else if (window.pageYOffset >= 50){
+      topBttn.style.display = 'none';
+  }
+  else {
     topBttn.style.display = 'none';
   }
 

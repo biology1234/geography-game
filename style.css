@@ -132,10 +132,80 @@ body, html {
   font-size: 20px;
 }
 
-footer {
-  position: absolute;
-  bottom:0;
-  top: 100%;
-  transform: translate(-100%);
 
+.footer{
+  margin-top: 220px;
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(65, 104, 133);
+  width: 100%;
+  height: 15%;
+  border-radius: 120px 120px 0 0 ;
+}
+
+#logInBttn2{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+.footerTitle{
+  position: absolute;
+  top: 25%;
+  font-family: 'Caveat', cursive;
+  left: 50%;
+  transform: translate(-50%);
+}
+.footerDescription{
+  position: absolute;
+  top: 55%;
+  margin-left: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footerTitle, .footerDescription{
+  color: white;
+}
+.nameFooter{
+top: 35%;
+}
+.emailFotter{
+top: 45%;
+}
+.descriptionUser{
+ top: 55%;
+padding-right: 70px;
+padding-bottom: 60px;
+}
+.submitFeedback{
+top: 80%;
+position: absolute;
+left: 77%;
+border-radius: 40px;
+padding-left: 60px;
+padding-right: 60px;
+padding-top: 10px;
+padding-bottom: 10px;
+border: 3px solid black;
+cursor: pointer;
+}
+.nameFooter, .emailFotter, .descriptionUser{
+  position: absolute;
+  left: 75%;
+  padding-right: 70px;
+}
+.feedBack{
+  font-family: 'Caveat', cursive; 
+  color: white;
+  position: absolute;
+  left: 75.5%;
+  top: 15%;
+
+}
+.copyright{
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
 }

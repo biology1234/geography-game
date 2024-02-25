@@ -2,11 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
 body, html {
-    height: 300vh;
-   
-    overflow-x: hidden;
-
-    overscroll-behavior-y: scroll;
+  overflow-x:hidden ;
+  margin: 0;
+  padding: 0;
+  position: relative;
   }
  
 .welcomingContainer {
@@ -132,13 +131,12 @@ font-weight: bold;
 }
 
 .Video1{
-  position: relative; /* променено на relative от absolute */
-  margin-top: 285px; /* променено на 0 от 160% */
+  position: relative; 
+  margin-top: 285px; 
   left: 50%;
   height: 15%;
-  width: 50%;
- 
-  
+  width: 40%;
+  margin-bottom: 400px;
 }
 
 

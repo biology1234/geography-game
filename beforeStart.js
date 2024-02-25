@@ -47,7 +47,7 @@ const container = document.getElementById('container');
 
     signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
-// Signed in 
+ window.location.href ='beforeStart.html';
 const user = userCredential.user;
 
 // ...
