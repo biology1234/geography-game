@@ -155,9 +155,9 @@ hr{
     height: 35%;
 }
 
-@media screen  and (max-width: 450px ){
+@media screen  and (min-width: 360px ) and (max-width:400px){
     body, html{
-        height: 180vh;
+        height: 220vh;
         overflow-x: hidden;
     }
 
@@ -184,7 +184,7 @@ hr{
     padding-left: 310px;
     position: relative;
     top: 80px;
-    right: 165px;
+    right: 185px;
     height: 70px;
    }
    #links-home{
@@ -201,10 +201,10 @@ hr{
    }
    .container{
    position: relative;
-   left: 50px;
+   left: 13px;
    width: 336px;
    z-index: 1;
-  top: 55px;
+  top: 22px;
    }
  
    .hr1{
@@ -215,7 +215,7 @@ hr{
    .logo_img{
     position: relative;
     bottom: 45px;
-    right: -120px;
+    right: -85px;
    }
    .passwordShowingImg2{
     height: 22px;
@@ -256,5 +256,12 @@ hr{
 }
 .submitFeedback{
     left: 135px;
+    top: 490px;
+
+}
+form{
+    position: relative;
+    right: 40px;
+    top: -27px;
 }
 }
