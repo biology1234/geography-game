@@ -1,6 +1,9 @@
-body {
-    height: 400vh;
-    overflow-x: hidden;
+body,html {
+    height: 350vh;
+    overflow-x:hidden ;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 .header{
     background-color: rgb(65, 104, 133);
@@ -23,6 +26,7 @@ hr{
 .tissueTopic{
     font-size: 24px;
     margin-left: 28px;
+    
 }
 
   
@@ -45,7 +49,6 @@ hr{
 .boldText1{
     position: relative;
     top:420px;
-   
     font-size: 36px;
 }
 
@@ -60,11 +63,11 @@ hr{
     color: white;
    text-align: center;
     font-weight: bold;
-    font-size: 34px;
+    font-size: 64px;
     position: static;
     margin-top: -290px;
     margin-left: -290px;
-   
+    font-family: 'Caveat', cursive;
 }
 
 .mnogosloen{
@@ -82,3 +85,9 @@ hr{
       right: 300px;
       top: 30px;
 }
+.text{
+    margin-bottom: 400px;
+}
+
+
+

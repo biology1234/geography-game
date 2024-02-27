@@ -1,20 +1,13 @@
 
-/*Писане на текста за добре дошли*/
+const text = document.getElementById('question1');
+  /*Показване на "ключовия" въпрос*/
+ addEventListener('scroll', function(){
+  if(window.pageYOffset >= 120){
+    text.style.display ='block';
+  text.style.animation = 'animation3 2s forwards'
+  }
 
-  /*Писане на заглавието за представяне на ключовите неща на проекта*/
- let start = 0;
-let question1 = 'Какво е ключовото в тази платформа?';
-let smallTextInnerElement = document.getElementById('question1');
-let speed2 = 120;
-let scroll = 0;
-
-function typeWriter2() {
-    if (start < question1.length) {
-        smallTextInnerElement.innerHTML += question1.charAt(start);
-        start++;
-        setTimeout(typeWriter2, speed2);
-    }
-}
+ });
 /*Оцветяване на текста, а се скролне до определено положение*/
 addEventListener('scroll', function showingQuestion(event) {
   scroll = window.pageYOffset;
@@ -23,7 +16,7 @@ addEventListener('scroll', function showingQuestion(event) {
     }
 });
 
-let text1 = document.getElementById('answerTopic1');
+const text1 = document.getElementById('answerTopic1');
 let scroll1 = 0;
 
 // Променено събитие от 'wheel' на 'scroll'
@@ -35,7 +28,7 @@ addEventListener('scroll', function coloredText1(event) {
     text1.style.color = "#43B68A";
   }
 });
-      let text2 = document.getElementById('answerTopic2');
+      const text2 = document.getElementById('answerTopic2');
       let scroll2 = 0; 
        addEventListener('scroll', function coloredText2 (event){
 
@@ -45,7 +38,7 @@ addEventListener('scroll', function coloredText1(event) {
          }
        });
    
-      let text3 = document.getElementById('answerTopic3'); 
+      const text3 = document.getElementById('answerTopic3'); 
       let scroll3 = 0; 
       addEventListener('scroll', function coloredText3 (event){
        scroll3 = window.pageYOffset;
@@ -99,8 +92,8 @@ addEventListener('scroll', function headerscroll() {
    measurementId: "G-58F1VKGWFK"
  };
 
-let logInBttn = document.getElementById('logInBttn');
-let myProfileBttn = document.getElementById('myProfileBttn');
+const logInBttn = document.getElementById('logInBttn');
+const myProfileBttn = document.getElementById('myProfileBttn');
 /*Проверка дали има логнат потребител*/
  // Initialize Firebase
  const app = initializeApp(firebaseConfig);
@@ -122,7 +115,7 @@ myProfileBttn.style.display='none';
 });
 
 /*Поставяне на топ бутона*/
-let topBttn = document.getElementById('topBttn');
+const topBttn = document.getElementById('topBttn');
 let scroll5 = 0;
 
 addEventListener('scroll', function() {
