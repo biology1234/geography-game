@@ -1,20 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
-    let start = 0; 
-    let text = 'Добре дошли в BioMedicine!';
-    let speed = 110;
-    let textInnerElement = document.querySelector('.textInner');
 
-    function typeWriter() {
-        if (start < text.length) {
-            textInnerElement.innerHTML += text.charAt(start);
-            start++;
-            setTimeout(typeWriter, speed);
-        } 
-    }
-    typeWriter();
- }); 
-   
-  
+/*Писане на текста за добре дошли*/
+
+  /*Писане на заглавието за представяне на ключовите неща на проекта*/
  let start = 0;
 let question1 = 'Какво е ключовото в тази платформа?';
 let smallTextInnerElement = document.getElementById('question1');
@@ -28,7 +15,7 @@ function typeWriter2() {
         setTimeout(typeWriter2, speed2);
     }
 }
-
+/*Оцветяване на текста, а се скролне до определено положение*/
 addEventListener('scroll', function showingQuestion(event) {
   scroll = window.pageYOffset;
     if (scroll >= 340) {
@@ -78,6 +65,8 @@ addEventListener('scroll', function coloredText1(event) {
         }
       });
    });   
+
+   /*Поставяне на фикснатия хедър*/
   const header = document.getElementById('header');
 
 addEventListener('scroll', function headerscroll() {
@@ -89,7 +78,7 @@ addEventListener('scroll', function headerscroll() {
     header.classList.remove('fixed-header');
   }
 });
-
+/*Връзка с базата данни*/
  // Import the functions you need from the SDKs you need
  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
@@ -112,7 +101,7 @@ addEventListener('scroll', function headerscroll() {
 
 let logInBttn = document.getElementById('logInBttn');
 let myProfileBttn = document.getElementById('myProfileBttn');
-
+/*Проверка дали има логнат потребител*/
  // Initialize Firebase
  const app = initializeApp(firebaseConfig);
  const analytics = getAnalytics(app);
@@ -132,7 +121,7 @@ myProfileBttn.style.display='none';
 }
 });
 
-
+/*Поставяне на топ бутона*/
 let topBttn = document.getElementById('topBttn');
 let scroll5 = 0;
 

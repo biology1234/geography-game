@@ -1,3 +1,4 @@
+/*Връзка с базата данни*/
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
  import { onAuthStateChanged, signInWithEmailAndPassword, GithubAuthProvider, getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signInWithRedirect, getRedirectResult, FacebookAuthProvider  } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
@@ -24,7 +25,7 @@ const container = document.getElementById('container');
  const app = initializeApp(firebaseConfig);
  const analytics = getAnalytics(app); // Use the app object here
  const auth = getAuth();
- 
+ /*Проверка дали потребител е влязъл*/
  onAuthStateChanged(auth, (user) => {
    if (user) {
      
@@ -39,7 +40,7 @@ const container = document.getElementById('container');
  });
 
 
-
+/*Проверка за съответствие на профил*/
  document.getElementById("submit2").addEventListener('click', function (event) {
     event.preventDefault();
     const email = document.getElementById('email2').value;
@@ -59,14 +60,7 @@ alert('Моля, въведете валиден имейл адрес или п
 });
 });
 
-document.getElementById("submit2").addEventListener('click', function (event) {
-
-    set(ref(db, 'Потребители/' + document.getElementById("name").value), {
-        name: document.getElementById("name").value,
-        lastName: document.getElementById("lastName").value,
-    });
-});
-
+/*Автентикации с Google, Facebook, GitHub*/
 const google = document.getElementById('google2');
 google.addEventListener('click', (event) => {
     event.preventDefault();
@@ -103,7 +97,7 @@ const uid = user.uid;
 });
 
 
-
+/*Показване/Скриване на парола*/
 const passwordShowingImg2 = document.getElementById('passwordShowingImg2');
 let password2 = document.getElementById('password2');
 passwordShowingImg2.addEventListener('click', function passwordShowing(event){
