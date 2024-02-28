@@ -4,73 +4,154 @@ let examScore = 0;
 function submitQuiz(event) {
   const firstQuestion = document.querySelector('input[name="q1"]:checked');
  
-
   if (firstQuestion && firstQuestion.value === 'c') {
     studentScore += 1;
+    examScore += 1; 
   }
-
-  examScore += 1;
-  alert(`Браво, вие изкарахте ${studentScore} точки от ${examScore} точки`);
-  event.preventDefault();
+  else{
+    examScore += 1; 
+  }
+  const secondQuestion = document.querySelector('input[name="q2"]:checked');
+  if (secondQuestion && secondQuestion.value === 'a'){
+    studentScore += 1;
+    examScore += 1; 
+  }
+else{
+  examScore += 1; 
 }
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-    import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyB_TgoZVBgp8xqflkvVJbRbPfvTWnyYfOc",
-      authDomain: "biomedicine-29379.firebaseapp.com",
-      databaseURL: "https://biomedicine-29379-default-rtdb.europe-west1.firebasedatabase.app",
-      projectId: "biomedicine-29379",
-      storageBucket: "biomedicine-29379.appspot.com",
-      messagingSenderId: "1023601874434",
-      appId: "1:1023601874434:web:da6c166d9d0598a237f91b",
-      measurementId: "G-58F1VKGWFK"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    
-  
-    const db = getDatabase(app);
-  
-               document.getElementById("submitButton").addEventListener('click', function database(e){
-                e.preventDefault();
-                set(ref(db, 'user/'),
-                {
-     
-                  Брой_точки: studentScore.value,
-                  
-  
-                });
-                  
-               })
+const thirdQuestion = document.querySelector('input[name="q3"]:checked');
+  if (thirdQuestion && thirdQuestion.value === 'a'){
+    studentScore += 1;
+    examScore += 1; 
+  }
+else{
+  examScore += 1; 
+}
+const fourQuestion = document.querySelector('input[name="q4"]:checked');
+  if (fourQuestion && fourQuestion.value === 'c'){
+    studentScore += 1;
+    examScore += 1; 
+  }
+else{
+  examScore += 1; 
+}
 
-            
-               const timerElement = document.getElementById("timer");
-               const startTime = Date.now();
-               const endTime = startTime + (2 * 60 * 60 * 1000); // 2 часа в милисекунди
-       
-               const updateTimer = () => {
-                   const currentTime = Date.now();
-                   const remainingTime = endTime - currentTime;
-       
-                   const hours = Math.floor(remainingTime / (1000 * 60 * 60));
-                   const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-                   const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-       
-                   timerElement.textContent = `${hours} часа, ${minutes} минути`;
-       
-                   if (remainingTime <= 0) {
-                       clearInterval(interval);
-                       timerElement.textContent = "Времето изтече!";
-                   }
-               };
-       
-               const interval = setInterval(updateTimer, 1000); // Актуализира таймера всяка секунда
-       
-               updateTimer();
-     
+const fiveQuestion = document.querySelector('input[name="q5"]:checked');
+  if (fiveQuestion && fiveQuestion.value === 'c'){
+    studentScore += 1;
+    examScore += 1; 
+  }
+else{
+  examScore += 1; 
+}
+const sixQuestion = document.querySelector('input[name="q6"]:checked');
+  if (sixQuestion && sixQuestion.value === 'c'){
+    studentScore += 1;
+    examScore += 1; 
+  }
+else{
+  examScore += 1; 
+}
+
+const sevenQuestion = document.querySelector('input[name="q7"]:checked');
+  if (sevenQuestion && sevenQuestion.value === 'd'){
+    studentScore += 1;
+    examScore += 1; 
+  }
+else{
+  examScore += 1; 
+}
+
+const eightQuestion = document.querySelector('input[name="q8"]:checked');
+  if (eightQuestion && eightQuestion.value === 'd'){
+    studentScore += 1;
+    examScore += 1; 
+  }
+else{
+  examScore += 1; 
+}
+
+const ninestion = document.querySelector('input[name="q9"]:checked');
+  if (ninestion && ninestion.value === 'a'){
+    studentScore += 1;
+    examScore += 1; 
+  }
+else{
+  examScore += 1; 
+}
+
+const tenQuestion = document.querySelector('input[name="q10"]:checked');
+  if (tenQuestion && tenQuestion.value === 'b'){
+    studentScore += 1;
+    examScore += 1; 
+  }
+else{
+  examScore += 1; 
+}
+
+const elevenQuestion = document.querySelector('input[name="q11"]:checked');
+  if (elevenQuestion && elevenQuestion.value === 'c'){
+    studentScore += 1;
+    examScore += 1; 
+  }
+else{
+  examScore += 1; 
+}
+
+const twelveQuestion = document.querySelector('input[name="q12"]:checked');
+  if (twelveQuestion && twelveQuestion.value === 'a'){
+    studentScore += 1;
+    examScore += 1; 
+  }
+else{
+  examScore += 1; 
+}
+const thirteenQuestion = document.querySelector('input[name="q13"]:checked');
+  if (thirteenQuestion && thirteenQuestion.value === 'd'){
+    studentScore += 1;
+    examScore += 1; 
+  }
+else{
+  examScore += 1; 
+}
+
+const fourteen = document.querySelector('input[name="q14"]:checked');
+  if (fourteen && fourteen.value === 'b'){
+    studentScore += 1;
+    examScore += 1; 
+  }
+else{
+  examScore += 1; 
+}
+
+const fiveteen = document.querySelector('input[name="q15"]:checked');
+  if (fiveteen && fiveteen.value === 'c'){
+    studentScore += 1;
+    examScore += 1; 
+  }
+else{
+  examScore += 1; 
+}
+const sixteen = document.querySelector('input[name="q16"]:checked');
+  if (sixteen && sixteen.value === 'd'){
+    studentScore += 1;
+    examScore += 1; 
+  }
+else{
+  examScore += 1; 
+}
+const seventeen = document.querySelector('input[name="q17"]:checked');
+if (seventeen && seventeen.value === 'a'){
+  studentScore += 1;
+  examScore += 1; 
+}
+else{
+examScore += 1; 
+}
+
+
+
+  alert(`Браво, вие изкарахте ${studentScore} точки от ${examScore} точки`);
+  event.preventDefault();  
+  window.location.reload();
+}

@@ -1,6 +1,9 @@
 .indexExam, body {
-    height: 380vh;
-
+    height: 750vh;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
 }
 .examContainer {
     max-width: 550px;
@@ -24,9 +27,12 @@
     font-size: 11px;
     font-family: Arial, Helvetica, sans-serif;
 }
-.answers {
+.answer {
     color:black;
-    font-size: 10px;
+    font-size: 15px;
+}
+i{
+    font-size: 15px;
 }
 hr {
     width: 60%;
@@ -79,7 +85,7 @@ hr {
     background-color: transparent;
     position: absolute;
     left: 50%;
-    top: 3100px;
+    top: 4960px;
     transform: translate(-50%, -100%);
     padding-left: 40px;
     padding-right: 40px;
@@ -103,4 +109,17 @@ hr {
 .scoreOutput{
     position: relative;
     top: 10000px;
+}
+.refleks{
+    height: 560px;
+}
+.answer2{
+    
+    padding-right: 160px;
+    padding-bottom: 10px;
+}
+.footer{
+    height: 8%;
+   width: 100%;
+   left: 0.1px;
 }
