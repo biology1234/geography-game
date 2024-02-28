@@ -90,6 +90,9 @@ hr{
 }
 
 @media screen and (max-width: 460px) {
+    body,html{
+        height: 365vh;
+    }
     .title{
      margin-left: -325px;
     }
@@ -158,6 +161,49 @@ hr{
     .example{
         position: relative;
         bottom: 210px;
+    }
+    .footer{
+        border-radius: 0px;
+        height: 20%;
+}
+       #logInBttn2{
+        left: 75px;
+        top: -15px;
+       }
+       .footerTitle{
+        top: 70px;
+    
+       }
+    .footerDescription{
+        top: 125px;
+        text-align: center;
+        right: 22px;
+    }
+    .feedBack{
+        left: 100px;
+        top: 240px;
+    }
+    .nameFooter, .emailFotter, .descriptionUser{
+        left: 100px;
+        
+    }
+    .nameFooter{
+        top: 320px;
+    }
+    .emailFotter{
+        top: 360px;
+    }
+    .descriptionUser{
+        top: 400px;
+    }
+    .submitFeedback{
+        left: 115px;
+        top: 490px;
+    
+    }
+    .copyright{
+        left: 203px;
+        top: 536px;
     }
 }
 
