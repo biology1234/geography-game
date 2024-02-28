@@ -91,6 +91,8 @@ hr{
 
 @media screen and (max-width: 460px) {
     body,html{
+        margin: 0;
+        padding: 0;
         height: 365vh;
         display: flex;
         flex-direction: column;
