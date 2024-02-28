@@ -93,7 +93,7 @@ hr{
     body,html{
         margin: 0;
         padding: 0;
-        min-height: 365vh;
+        min-height: 315vh;
        position: relative;
     }
     .title{
@@ -170,7 +170,7 @@ hr{
         border-radius: 0px;
         height: 20%;
         position: absolute;
-        bottom: 0;
+        top:2205px;
         width: 100%;
 }
        #logInBttn2{
