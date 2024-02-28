@@ -94,8 +94,7 @@ hr{
         margin: 0;
         padding: 0;
         min-height: 365vh;
-        display: grid;
-        grid-template-rows: 1fr auto;
+       position: relative;
     }
     .title{
      margin-left: -325px;
@@ -169,7 +168,7 @@ hr{
     }
     .footer{
         border-radius: 0px;
-        height: 15%;
+        height: 20%;
         position: absolute;
         bottom: 0;
         width: 100%;
