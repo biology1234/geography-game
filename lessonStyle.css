@@ -92,8 +92,7 @@ hr{
 @media screen and (max-width: 460px) {
     body,html{
         height: 365vh;
-        margin: 0;
-        padding: 0;
+        position: relative;
     }
     .title{
      margin-left: -325px;
