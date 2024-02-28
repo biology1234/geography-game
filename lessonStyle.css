@@ -165,14 +165,14 @@ hr{
     .footer{
         border-radius: 0px;
         height: 20%;
-        top: 50px;
+        top: 0;
 }
        #logInBttn2{
         left: 75px;
         top: -15px;
        }
        .footerTitle{
-        top: 0;
+        top: 70px;
     
        }
     .footerDescription{
