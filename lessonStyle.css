@@ -163,8 +163,8 @@ hr{
     }
     .example{
         position: relative;
-        bottom: 210px;
-        flex: 1;
+        bottom: 240px;
+        
     }
     .footer{
         border-radius: 0px;
