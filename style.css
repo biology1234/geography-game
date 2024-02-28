@@ -4,13 +4,11 @@
 
 
 body, html {
-  
-
+  overflow-x:hidden ;
   margin: 0;
   padding: 0;
-  /* Градиент, който покрива целия фон на страницата  */
-  background-color: rgb(232, 251, 255);
-}
+  position: relative;
+  }
 .logobttn {
   background-color: transparent;
   border: none;

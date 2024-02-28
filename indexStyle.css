@@ -46,9 +46,7 @@ body, html {
   color: white;
   font-size: 70px;
   font-weight: bold;
-  animation-name: animation2;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
+
 }
 @keyframes animation2 {
   from {
@@ -187,4 +185,14 @@ background-color: #677382;
 }
 .top:hover{
   background-color: #4c545e;
+}
+@media screen and (min-width:320px) and (max-width: 460px) {
+  body, html{
+  overflow: hidden;
+  
+  }
+  .welcomingContainer{
+    font-size:35px ;
+  }
+  
 }

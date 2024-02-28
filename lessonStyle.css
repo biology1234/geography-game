@@ -89,5 +89,47 @@ hr{
     margin-bottom: 400px;
 }
 
-
+@media screen and (max-width: 460px) {
+    .title{
+     margin-left: -325px;
+    }
+    .links{
+        position: relative;
+     
+    }
+    #links-index{
+        left: -237px;
+        top: 96px;
+        
+      }
+      #links-lesson{
+        left: -94px;
+        top: 70px;
+      }
+      #links-exam{
+        left: 24px;
+        top: 45px;
+      }
+      .logo_img{
+        position: relative;
+        left: 130px;
+      
+      }
+      .text{
+        text-align: center;
+      }
+      .title{
+        position: relative;
+        top: 35px;
+        font-size: 40px;
+      }
+      .linksDiv{
+        margin-right:25px;
+ 
+    }
+    .logobttn{
+        position: relative;
+        right: 22px;
+    }
+}
 
