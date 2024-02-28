@@ -93,9 +93,8 @@ hr{
     body,html{
         margin: 0;
         padding: 0;
-        height: 365vh;
-        display: flex;
-        flex-direction: column;
+        min-height: 365vh;
+       position: relative;
     }
     .title{
      margin-left: -325px;
@@ -170,7 +169,9 @@ hr{
     .footer{
         border-radius: 0px;
         height: 15%;
-        align-self: flex-end;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
 }
        #logInBttn2{
         left: 75px;
