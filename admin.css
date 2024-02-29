@@ -1,0 +1,20 @@
+.title{
+    text-align: center;
+}
+.links{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+#lesson{
+    margin-left: -127px;
+}
+#exam{
+    margin-left: 127px;
+}
+#feedback{
+    width: 560px;
+    height:100px;
+    border: 3px solid black;
+    border-radius:10px;
+}
