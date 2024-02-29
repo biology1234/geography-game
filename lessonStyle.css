@@ -90,6 +90,9 @@ hr{
 .text{
     margin-bottom: 400px;
 }
+.footer{
+    margin-top: 430px;
+}
 
 @media screen and (max-width: 460px) {
     body,html{

@@ -1,5 +1,5 @@
 body {
-    height: 150vh;
+    height: 140vh;
     
     font-family: 'Montserrat', sans-serif;
     position: relative;
@@ -153,6 +153,7 @@ hr{
 
 .footer{
     height: 35%;
+    margin-top:560px;
 }
 
 @media screen  and (min-width: 360px ) and (max-width:400px){
