@@ -1,0 +1,14 @@
+.chooseQuestion{
+    display: none;
+    text-align: center;
+    border: 2px solid black;
+    width: 470px;
+    height: 215px;
+    left: 50%;
+   position: fixed;
+   transform: translate(-50%);
+   
+ }
+ .background{
+     
+ }
