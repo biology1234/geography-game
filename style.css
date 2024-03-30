@@ -95,7 +95,7 @@ body, html {
         display: none;
       }
       body,html {
-        height:90vh;
+        overflow: hidden;
       }
 }
 
