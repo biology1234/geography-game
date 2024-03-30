@@ -12,15 +12,14 @@ body, html {
 }
 #phone{
  background-color: #ffffff;
- opacity: 60%;
+ opacity: 50%;
  border-radius: 40px 40px 40px 40px;
  padding-bottom: 420px;
  margin-left: 15px;
  margin-right: 15px;
  margin-top: 70px;
  box-shadow: inset -2px -3px 2px black;
-
-
+ filter: brightness(100%);
 
 }
 #title{
