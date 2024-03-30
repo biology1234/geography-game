@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+body, html {
+    overflow-x: hidden;
+    background-color: #b3b1a0;
+ 
+}
+#phone{
+ background-color: #bfcad6;
+ padding-bottom: 420px;
+ margin-left: 15px;
+ margin-right: 15px;
+ margin-top: 80px;
+ box-shadow: inset -2px -3px 2px black;
+
+
+
+}
+#title{
+    position: relative;
+    text-align: center;
+    color: black;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 35px;
+    top: 30px;
+}
+
+#Enter{
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%);
+    position: absolute;
+    width: 200px;
+    background: transparent;
+    color: black;
+    border: 3px solid black;
+    border-radius: 40px;
+    height: 50px;
+    font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+}
+#pin1{
+    transform: translate(-50%);
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    top: 40%;  
+    font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  color: black;
+  
+  background: transparent;
+  border-bottom: 2.5px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+#name {
+    transform: translate(-50%);
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    top: 50%;  
+    font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  color: black;
+  
+  background: transparent;
+  border-bottom: 2.5px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+::placeholder{
+    color: black;
+  }
+@media screen and (max-width: 480px) {
+      #board {
+        display: none;
+      }
+}
+
+@media screen and (min-width: 600px) and (max-width: 3840px) {
+    #phone{
+        display: none;
+    }
+}
