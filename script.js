@@ -57,7 +57,9 @@ const inputNum = document.getElementById('pin1');
 
 let num12; // Дефинирайте num12 тук, за да е достъпен в главния обхват
 
-inputNum.addEventListener('change', function() {
+const button1 = document.getElementById('Enter');
+
+button1.addEventListener('click', function() {
     var inputValue = inputNum.value;
     const dbRef = ref(getDatabase());
 
@@ -70,12 +72,15 @@ inputNum.addEventListener('change', function() {
                 alert('ок');
             } else {
                 alert('не е ок');
+                button1.removeAttribute('readonly');
             }
         } else {
             alert('Няма данни в базата данни.');
+            button1.removeAttribute('readonly');
         }
     }).catch((error) => {
         console.error(error);
         alert('Възникна грешка при взимането на данните от базата данни.');
+        button1.removeAttribute('readonly');
     });
 });
