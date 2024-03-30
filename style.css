@@ -2,11 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
 body, html {
     overflow-x: hidden;
-    background-color: #b3b1a0;
+    background: rgb(30,26,55);
+    background: -moz-linear-gradient(90deg, rgba(30,26,55,1) 0%, rgba(25,26,68,1) 23%, rgba(5,8,94,1) 49%, rgba(5,9,119,1) 74%);
+    background: -webkit-linear-gradient(90deg, rgba(30,26,55,1) 0%, rgba(25,26,68,1) 23%, rgba(5,8,94,1) 49%, rgba(5,9,119,1) 74%);
+    background: linear-gradient(90deg, rgba(30,26,55,1) 0%, rgba(25,26,68,1) 23%, rgba(5,8,94,1) 49%, rgba(5,9,119,1) 74%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1e1a37",endColorstr="#050977",GradientType=1);
+ 
  
 }
 #phone{
- background-color: #bfcad6;
+ background-color: #ffffff;
+ opacity: 60%;
+ border-radius: 40px 40px 40px 40px;
  padding-bottom: 420px;
  margin-left: 15px;
  margin-right: 15px;
@@ -25,6 +32,9 @@ body, html {
     font-weight: 700;
     font-size: 35px;
     top: 30px;
+   filter: brightness(200%);
+   
+
 }
 
 #Enter{
