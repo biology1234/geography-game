@@ -67,9 +67,9 @@ inputNum.addEventListener('change', function() {
             num12 = snapshot.val().num; // Задаване на стойността на num12
             // Сравняване на стойностите само след като стойността на num12 е получена
             if (inputValue === num12) {
-               document.getElementById('submit').addEventListener('click', window.location.href = 'quiz.html');
+                alert('ок');
             } else {
-               
+                alert('не е ок');
             }
         } else {
             alert('Няма данни в базата данни.');
