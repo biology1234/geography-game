@@ -73,7 +73,7 @@ button1.addEventListener('click', function() {
             if (inputValue === num12) {
               window.location.href = 'quiz.html';
             } else {
-                alert('Не е ок!'); 
+                alert('Моля, въведете пина правилно!'); 
                 
             }
         } else {
