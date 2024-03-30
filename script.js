@@ -2,7 +2,7 @@ const inputNumber = document.getElementById('pin');
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
+import { getDatabase, ref, set, child, get } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -50,23 +50,32 @@ function writeUserData(num) {
     set(ref(db, 'pin/'), {
        num: num  
     });
-    localStorage.setItem('num', num);
+    
 }
 
 const inputNum = document.getElementById('pin1');
 
-// Event listener for input changes
+let num12; // Дефинирайте num12 тук, за да е достъпен в главния обхват
+
 inputNum.addEventListener('change', function() {
-    // Получаване на стойността на инпута
     var inputValue = inputNum.value;
+    const dbRef = ref(getDatabase());
 
-    // Получаване на стойността от localStorage
-    var localNum = localStorage.getItem('num');
-
-    // Сравняване на стойностите
-    if (inputValue == localNum) {
-        alert('ок');
-    } else {
-        alert('не е ок');
-    }
+    // Извикване на асинхронната функция за получаване на стойността от базата данни
+    get(child(dbRef, '/pin')).then((snapshot) => {
+        if (snapshot.exists()) {
+            num12 = snapshot.val().num; // Задаване на стойността на num12
+            // Сравняване на стойностите само след като стойността на num12 е получена
+            if (inputValue === num12) {
+                alert('ок');
+            } else {
+                alert('не е ок');
+            }
+        } else {
+            alert('Няма данни в базата данни.');
+        }
+    }).catch((error) => {
+        console.error(error);
+        alert('Възникна грешка при взимането на данните от базата данни.');
+    });
 });
