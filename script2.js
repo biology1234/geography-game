@@ -24,7 +24,7 @@ const pin = document.getElementById('pin');
 const button = document.getElementById('start');
 
 // Event listener for the button click
-button.addEventListener('click', function() {
+button.addEventListener('click', function num1() {
     // Generate random number and hide the button
     const num = generateRandomNum();
     button.style.display = 'none';
@@ -33,8 +33,10 @@ button.addEventListener('click', function() {
     pin.innerHTML = num;
     
     // Write the generated number to the database
-    writeUserData(num);
+    writeCode(num);
+      
 });
+
 
 // Function to generate a 6-digit random number
 function generateRandomNum() {
@@ -46,7 +48,7 @@ function generateRandomNum() {
 }
 
 // Function to write the generated number to the database
-function writeUserData(num) {
+function writeCode(num) {
     set(ref(db, 'pin/'), {
        num: num  
     });
@@ -69,18 +71,25 @@ button1.addEventListener('click', function() {
             num12 = snapshot.val().num; // Задаване на стойността на num12
             // Сравняване на стойностите само след като стойността на num12 е получена
             if (inputValue === num12) {
-                alert('ок');
+              window.location.href = 'quiz.html';
             } else {
-                alert('не е ок');
-                button1.removeAttribute('readonly');
+                alert('Не е ок!'); 
+                
             }
         } else {
             alert('Няма данни в базата данни.');
-            button1.removeAttribute('readonly');
+            
         }
     }).catch((error) => {
         console.error(error);
         alert('Възникна грешка при взимането на данните от базата данни.');
-        button1.removeAttribute('readonly');
+        
     });
 });
+
+
+
+  
+
+
+ 

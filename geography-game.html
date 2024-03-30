@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Игра</title>
-    <script src="script.js" type="module"></script>
+    <script src="script2.js" type="module"></script>
+    <script src="script1.js" type="module"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,10 +17,11 @@
  
  <div id="phone">
 <h1 id="title">Въведете код и името си, за да започнете игра</h1>
- <input type="text" pattern="[0-9]{6}" id="pin1" placeholder="Въведете код"><br>
- <input type="text" id="name" placeholder="Въведете име"><br>
+<form>
+ <input type="phone"  id="pin1" placeholder="Въведете код"required><br>
+ <input type="text" id="name" placeholder="Въведете име" required><br>
  <input type="submit" id="Enter" value="Започни игра"> 
- 
+ </form>
 </div>
 
 </body>
