@@ -101,6 +101,7 @@ body, html {
 @media screen and (max-width: 480px) {
       #board {
         display: none;
+        height: 90vh;
       }
       body,html {
         overflow: hidden;
