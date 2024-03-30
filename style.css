@@ -14,7 +14,7 @@ body, html {
 #phone {
     background-color: rgba(255, 255, 255, 0.257); /* Прозрачен бял цвят с прозрачност 10% */
     border-radius: 40px; /* Ако всички четири ъгъла имат същия радиус, може да го зададете по този начин */
-    padding-bottom: 420px;
+    padding-bottom: 480px;
     margin: 70px 15px 0; /* Обединяване на маржините в един ред */
     border: 3px solid black;
     position: relative; /* Задължително за абсолютната позиция на псевдоелемента */
