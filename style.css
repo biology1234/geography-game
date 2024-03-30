@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 body, html {
     overflow-x: hidden;
  
@@ -99,6 +100,67 @@ body, html {
 ::placeholder{
     color: white;
   }
+
+#title1{
+    text-align: center;
+    color: white;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 65px;
+    position: relative;
+    bottom: 140px;
+}
+#link{
+    text-align: center;
+    color: white;
+    font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+    font-size: 45px;
+    position: relative;
+    bottom: 240px;
+}
+span{
+   text-decoration:underline;
+}
+#board{
+    background-color: rgba(255, 255, 255, 0.169);
+    position: absolute; 
+   left: 50%;
+   top: 20%;
+   transform: translate(-50%);
+    width: 80%;
+    height: 70%;
+}
+#pin{
+    text-align: center;
+    color: white;
+    font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+    font-size: 50px;
+    position: relative;
+    top:  10px;
+
+}
+#start{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%);
+    background: transparent;
+    border: 3px solid white;
+    border-radius: 40px;
+    width: 320px;
+    color: white;
+    font-size: 40px;
+}
+#startGame{
+    display: none;
+}
 @media screen and (max-width: 480px) {
       #board {
         display: none;
