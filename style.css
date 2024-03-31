@@ -157,9 +157,23 @@ span{
     width: 320px;
     color: white;
     font-size: 40px;
+    cursor: pointer;
 }
 #startGame{
     display: none;
+}
+#startGameButton{
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%);
+  background: transparent;
+  border: 3px solid white;
+  border-radius: 40px;
+  width: 320px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
 }
 @media screen and (max-width: 480px) {
       #board {
