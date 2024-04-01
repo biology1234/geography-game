@@ -148,7 +148,7 @@ span{
 
 }
 #start{
-  display: block;
+  display: none;
     position: absolute;
     left: 50%;
     top: 30%;
@@ -162,7 +162,7 @@ span{
     cursor: pointer;
 }
 #startGame{
-    display: block;
+    display: none;
 }
 #startGameButton{
   position: absolute;
