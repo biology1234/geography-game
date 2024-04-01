@@ -16,11 +16,11 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase();
 const button = document.getElementById('Enter');
-button.addEventListener('click', function name(event){
+button.addEventListener('click', function name2(event){
  
     event.preventDefault();
-    set(ref(db, 'users/' + document.getElementById('name').value),{
-           name: document.getElementById('name').value
+    set(ref(db, 'users/' + document.getElementById('name2').value),{
+           name: document.getElementById('name2').value
      });
 
 
