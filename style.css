@@ -79,7 +79,7 @@ body, html {
   border-left: none;
   border-right: none;
 }
-#name {
+#name2 {
     transform: translate(-50%);
     position: absolute;
     width: 200px;
@@ -90,12 +90,12 @@ body, html {
   font-style: normal;
   font-size: 15px;
   color: white;
-  
-  background: transparent;
+  background: transparent; 
   border-bottom: 2.5px solid white;
   border-top: none;
   border-left: none;
   border-right: none;
+  
 }
 ::placeholder{
     color: white;
@@ -126,6 +126,7 @@ span{
    text-decoration:underline;
 }
 #board{
+
     background-color: rgba(255, 255, 255, 0.169);
     position: absolute; 
    left: 50%;
@@ -147,6 +148,7 @@ span{
 
 }
 #start{
+  display: none;
     position: absolute;
     left: 50%;
     top: 30%;
@@ -174,6 +176,52 @@ span{
   color: white;
   font-size: 40px;
   cursor: pointer;
+  
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table{
+  width: 50%;
+  position: absolute;
+  left: 50%; 
+  top: 10%;
+  transform: translate(-50%);
+}
+th{
+  width: 50%;
+  font-family: "Arial", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+}
+td{
+ width: 210px;
+  font-family: "Arial", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  
+}
+#name{
+  transform: translate(-50%);
+    position: absolute;
+    left: 25%;
+    top: 98%;  
+    font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  color: white;
+  background: transparent; 
+  border: none;
 }
 @media screen and (max-width: 480px) {
       #board {
