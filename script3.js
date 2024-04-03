@@ -18,25 +18,24 @@ const db = getDatabase();
 
 const tableName = document.getElementById('name'); 
 const starCountRef = ref(db, 'users/');
+const addedNames = []; // Дефиниране на масива за вече добавените имена
+
 onValue(starCountRef, (snapshot) => {
     const usersData = snapshot.val();
-    // Предполагайки, че usersData е обект със списък от потребители, може да извлечете стойностите на ключовете и да ги изведете
+
     for (const userId in usersData) {
-        if (Object.hasOwnProperty.call(usersData, userId)) {
-            const user = usersData[userId];
+        const user = usersData[userId];
+        
+        // Проверка дали името вече е добавено
+        if (!addedNames.includes(user.name)) {
             const newTd = document.createElement('td'); 
-            newTd.innerHTML += user.name + "<br>";
-            const newRow = document.createElement('tr');
-            
-            
-            // Set the innerHTML of td to user's name
             newTd.textContent = user.name;
-            
-            // Append the new td to the new row
+            const newRow = document.createElement('tr');
             newRow.appendChild(newTd);
-            
-            // Append the new row to the table
             tableName.appendChild(newRow);
+            
+            // Добавяне на името към масива на добавените имена
+            addedNames.push(user.name);
         }
     }
 });

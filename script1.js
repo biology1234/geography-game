@@ -31,3 +31,10 @@ document.getElementById('start').addEventListener('click', function(){
     document.getElementById('start').style.display = 'none';
     document.getElementById('startGame').style.display = 'block';
 });
+
+ button.addEventListener('click', function(){
+     document.getElementById('formDiv').style.display = 'none'; 
+     document.getElementById('pleaseWait').style.display = 'block';
+  
+     
+ });

@@ -71,7 +71,7 @@ button1.addEventListener('click', function() {
             num12 = snapshot.val().num; // Задаване на стойността на num12
             // Сравняване на стойностите само след като стойността на num12 е получена
             if (inputValue === num12) {
-              window.location.href = 'quiz.html';
+              
             } else {
                 alert('Моля, въведете пина правилно!'); 
                 
