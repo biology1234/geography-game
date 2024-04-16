@@ -33,8 +33,19 @@ document.getElementById('start').addEventListener('click', function(){
 });
 
  button.addEventListener('click', function(){
-     document.getElementById('formDiv').style.display = 'none'; 
-     document.getElementById('pleaseWait').style.display = 'block';
+   window.location.href ='quiz.html';
+     
   
      
  });
+
+ document.getElementById('tableView').addEventListener('click', function(){
+
+    document.getElementById('table').style.display ='block';
+    document.getElementById('startGame').style.display = 'none';
+ });
+
+ 
+
+ 
+ 

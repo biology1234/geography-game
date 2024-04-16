@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+body,html{
+    overflow-x: hidden;
+    height: 200vh;
+}
+
+#check{
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    text-align: center;
+}
+
+#question{
+ background-color: rgba(0, 0, 0, 0.19);
+
+}
+#questions{
+    font-family: 'Montserrat', sans-serif;
+}
+#answers{
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    
+}
+#submitQuiz{
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%);
+    position: absolute;
+    width: 200px;
+    background: transparent;
+    color: black;
+    border: 3px solid black;
+    border-radius: 40px;
+    height: 50px;
+}
+
+@media screen and (max-width:325px) {
+    #check{
+     font-size: 35px;
+    }
+    #question{
+    height: 220px;
+    }
+    #questions{
+        font-size: 20px;
+        position: relative;
+        left: 10px;
+        top: 10px;
+    }
+    #answers{
+        position: relative;
+        top: 10px;
+    }
+    #submitQuiz{
+        position: absolute;
+        top: 170%;
+    }
+}
