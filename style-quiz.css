@@ -3,6 +3,7 @@
 body,html{
     overflow-x: hidden;
     height: 200vh;
+   
 }
 
 #check{
@@ -25,9 +26,9 @@ body,html{
     font-style: normal;
     
 }
-#submitQuiz{
+#Send{
     left: 50%;
-    top: 70%;
+    top: 180%;
     transform: translate(-50%);
     position: absolute;
     width: 200px;
@@ -39,6 +40,52 @@ body,html{
 }
 
 @media screen and (max-width:325px) {
+    #check{
+     font-size: 35px;
+    }
+    #question{
+    height: 220px;
+    }
+    #questions{
+        font-size: 20px;
+        position: relative;
+        left: 10px;
+        top: 10px;
+    }
+    #answers{
+        position: relative;
+        top: 10px;
+    }
+    #submitQuiz{
+        position: absolute;
+        top: 170%;
+    }
+}
+
+@media screen and (max-width:380px) {
+    #check{
+     font-size: 35px;
+    }
+    #question{
+    height: 220px;
+    }
+    #questions{
+        font-size: 20px;
+        position: relative;
+        left: 10px;
+        top: 10px;
+    }
+    #answers{
+        position: relative;
+        top: 10px;
+    }
+    #submitQuiz{
+        position: absolute;
+        top: 170%;
+    }
+}
+
+@media screen and (max-width:430px) {
     #check{
      font-size: 35px;
     }

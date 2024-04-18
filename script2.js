@@ -71,7 +71,8 @@ button1.addEventListener('click', function() {
             num12 = snapshot.val().num; // Задаване на стойността на num12
             // Сравняване на стойностите само след като стойността на num12 е получена
             if (inputValue === num12) {
-              
+                window.location.href ='quiz.html';
+     
             } else {
                 alert('Моля, въведете пина правилно!'); 
                 
@@ -86,6 +87,15 @@ button1.addEventListener('click', function() {
         
     });
 });
+document.getElementById('start').addEventListener('click', function(){
+    document.getElementById('start').style.display = 'none';
+    document.getElementById('startGame').style.display = 'block';
+});
+ document.getElementById('tableView').addEventListener('click', function(){
+
+    document.getElementById('table').style.display ='block';
+    document.getElementById('startGame').style.display = 'none';
+ });
 
 
 

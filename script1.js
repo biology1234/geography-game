@@ -1,8 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
 import { getDatabase, ref, set, child, get } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
+const button1 = document.getElementById('Enter');
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyCbxyzEinSN9mYtkyuNh-mknJrgVUo62hQ",
     authDomain: "geography-project-9d.firebaseapp.com",
@@ -15,37 +14,30 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 const db = getDatabase();
-const button = document.getElementById('Enter');
-button.addEventListener('click', function name2(event){
- 
+const name =  document.getElementById('name2');
+
+
+button1.addEventListener('click', function name(event){
+let num = '';
+function generateRandomNum() {
+  
+  for (let i = 0; i < 6; i++) {
+      num += Math.floor(Math.random() * 10);
+  }
+
+}
+generateRandomNum();
+
     event.preventDefault();
-    set(ref(db, 'users/' + document.getElementById('name2').value),{
-           name: document.getElementById('name2').value
+    set(ref(db, 'users/' +  document.getElementById('name2').value ),{
+           name: document.getElementById('name2').value,
+           id: num
      });
 
 
 });
 
 
-document.getElementById('start').addEventListener('click', function(){
-    document.getElementById('start').style.display = 'none';
-    document.getElementById('startGame').style.display = 'block';
-});
 
- button.addEventListener('click', function(){
-   window.location.href ='quiz.html';
-     
-  
-     
- });
 
- document.getElementById('tableView').addEventListener('click', function(){
 
-    document.getElementById('table').style.display ='block';
-    document.getElementById('startGame').style.display = 'none';
- });
-
- 
-
- 
- 
