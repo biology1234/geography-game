@@ -1,0 +1,13 @@
+#resultsview{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.19);
+    height: 620px;
+}
+#context{
+    position: relative; 
+    top: 200px;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    text-align: center;
+}

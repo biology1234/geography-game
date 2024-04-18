@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>game</title>
     <link rel="stylesheet" href="style-quiz.css">
-    <script type="module" src="script4.js"></script>
+    <script src="script4.js"></script>
     
 </head>
-<body>
+<body id="body">
     <div id="game">
         <h1 id="check">Проверете какво сте научили</h1>
     <div id="question">
@@ -46,11 +46,17 @@
 
       <div id="question">
         <h1 id="questions">5. Кое животно не се среща в Сидни?</h1>
-        <label id="answers"><input type="radio" name="answer4" value="a" wfd-id="id0">A/ Кенгуру</label><br>
-        <label id="answers"><input type="radio" name="answer4" value="b" wfd-id="id0">Б/ Коала</label><br>
-        <label id="answers"><input type="radio" name="answer4" value="c" wfd-id="id0">В/ Папагал </label><br>
-        <label id="answers"><input type="radio" name="answer4" value="d" wfd-id="id0">Г/ Слон</label><br>
+        <label id="answers"><input type="radio" name="answer5" value="a" wfd-id="id0">A/ Кенгуру</label><br>
+        <label id="answers"><input type="radio" name="answer5" value="b" wfd-id="id0">Б/ Коала</label><br>
+        <label id="answers"><input type="radio" name="answer5" value="c" wfd-id="id0">В/ Папагал </label><br>
+        <label id="answers"><input type="radio" name="answer5" value="d" wfd-id="id0">Г/ Слон</label><br>
       </div>
-      <input type="submit" id="Send" value="Предай">
+      <input type="submit" id="Send" value="Предай" onclick="document.getElementById('game').style.display = 'none'; document.getElementById('resultsview').style.display ='block'; checkAnswers(); document.getElementById('resultsview').style.height = '250vh'; ">
+    </div>
+    
+        <div id="resultsview">
+          <h1  id="context">Браво, вие изкарахте <span id="points"></span> oт 5 точки!</h1>
+      </div>
+      
 </body>
 </html>
